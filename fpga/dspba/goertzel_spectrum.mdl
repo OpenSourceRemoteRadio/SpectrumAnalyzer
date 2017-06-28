@@ -1,0 +1,6598 @@
+Model {
+  Name			  "goertzel_spectrum"
+  Version		  8.7
+  MdlSubVersion		  1
+  SavedCharacterEncoding  "UTF-8"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.693"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
+  }
+  Description		  " DSP Builder Advanced Template for Template Design implementing ModelIP designs"
+  PreLoadFcn		  "\n "
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "% Run the setup script again just before the \n% model is run, so that any updates made\n% after opening"
+  " are applied. \nsetup_goertzel_spectrum; \n\n"
+  StopFcn		  "goertzel_analysis;"
+  LastSavedArchitecture	  "glnxa64"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [0.0, 28.0, 1920.0, 1030.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1886.0, 846.0]
+	ZoomFactor		[0.8574423480083857]
+	Offset			[-910.2823960880196, -102.32762836185822]
+      }
+    }
+  }
+  Created		  "Mon May 16 15:21:05 2011"
+  Creator		  "mjervis"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "5g"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jun 23 14:29:42 2017"
+  RTWModifiedTimeStamp	  420128825
+  ModelVersionFormat	  "1.%<AutoIncrement:693>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  on
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  VariantCondition	  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ShowVisualizeInsertedRTB on
+  ShowMarkup		  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  FunctionConnectors	  off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    6
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "goertzel_spectrum"
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "goertzel_spectrum"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      ""
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      7
+      Version		      "1.16.2"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  8
+	  Version		  "1.16.2"
+	  StartTime		  "0.0"
+	  StopTime		  "goertzel_spectrum_param.endTime"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepAuto"
+	  SolverName		  "FixedStepAuto"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverInfoToggleStatus  on
+	  IsAutoAppliedInSIP	  off
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  9
+	  Version		  "1.16.2"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  StreamToWorkspace	  off
+	  StreamVariableName	  "streamout"
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	  LoggingToFile		  off
+	  LoggingFileName	  "out.mat"
+	  LoggingIntervals	  "[-inf, inf]"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  10
+	  Version		  "1.16.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  DefaultParameterBehavior "Tunable"
+	  UseDivisionForNetSlopeComputation "off"
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsThreshold 12
+	  ExpressionDepthLimit	  2147483647
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  11
+	  Version		  "1.16.2"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "none"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "none"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "UseLocalSettings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "error"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  AllowSymbolicDim	  on
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	  SFOutputUsedAsStateInMooreChartDiag "error"
+	  IntegerSaturationMsg	  "none"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  12
+	  Version		  "1.16.2"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  13
+	  Version		  "1.16.2"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  EnableRefExpFcnMdlSchedulingChecks on
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  14
+	  Version		  "1.16.2"
+	  SFSimEcho		  on
+	  SimCtrlC		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  15
+	  Version		  "1.16.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  GenerateMissedCodeReplacementReport off
+	  RTWCompilerOptimization "off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      16
+	      Version		      "1.16.2"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      CommentStyle	      "Auto"
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      17
+	      Version		      "1.16.2"
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"GenerateAllocFcn"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PurelyIntegerCode"
+		Cell			"PortableWordSizes"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C89/C90 (ANSI)"
+	      CodeReplacementLibrary  "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      InferredTypesCompatibility off
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      CodeInterfacePackaging  "Nonreusable function"
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
+	      UseToolchainInfoCompliant	on
+	      GenerateSharedConstants on
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	      MultiInstanceErrorCode  "Error"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SlCovCC.ConfigComp {
+	  $ObjectID		  18
+	  Version		  "1.16.2"
+	  Description		  "Simulink Coverage Configuration Component"
+	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
+	  RecordCoverage	  off
+	  CovPath		  "/"
+	  CovSaveName		  "covdata"
+	  CovMetricSettings	  "dw"
+	  CovNameIncrementing	  off
+	  CovHtmlReporting	  on
+	  CovForceBlockReductionOff on
+	  CovEnableCumulative	  on
+	  CovSaveCumulativeToWorkspaceVar on
+	  CovSaveSingleToWorkspaceVar on
+	  CovCumulativeVarName	  "covCumulativeData"
+	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
+	  CovReportOnPause	  on
+	  CovModelRefEnable	  "Off"
+	  CovExternalEMLEnable	  off
+	  CovSFcnEnable		  off
+	  CovBoundaryAbsTol	  1e-05
+	  CovBoundaryRelTol	  0.01
+	  CovUseTimeInterval	  off
+	  CovStartTime		  0
+	  CovStopTime		  0
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 344, 194, 1440, 931 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    7
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    19
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "opaque"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      ComplexToRealImag
+      Output		      "Real and imag"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Delay
+      DelayLengthSource	      "Dialog"
+      DelayLength	      "2"
+      DelayLengthUpperLimit   "100"
+      InitialConditionSource  "Dialog"
+      InitialCondition	      "0.0"
+      ExternalReset	      "None"
+      ShowEnablePort	      off
+      PreventDirectFeedthrough off
+      DiagnosticForOutOfRangeDelayLength "None"
+      RemoveProtectionDelayLength off
+      InputProcessing	      "Elements as channels (sample based)"
+      UseCircularBuffer	      off
+      SampleTime	      "-1"
+      StateMustResolveToSignalObject off
+      CodeGenStateStorageClass "Auto"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RealImagToComplex
+      Input		      "Real and imag"
+      ConstantPart	      "0"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      GeneratePreprocessorConditionals off
+      TreatAsGroupedWhenPropagatingVariantConditions on
+      ContentPreviewEnabled   off
+      IsWebBlock	      off
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      UnitDelay
+      InitialCondition	      "0"
+      InputProcessing	      "Inherited"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      CodeGenStateStorageClass "Auto"
+      HasFrameUpgradeWarning  on
+    }
+  }
+  System {
+    Name		    "goertzel_spectrum"
+    Location		    [0, 28, 1920, 1058]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "86"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1701"
+    Block {
+      BlockType		      Reference
+      Name		      "AvalonMMSlaveSettings"
+      SID		      "805"
+      Ports		      []
+      Position		      [105, 110, 232, 186]
+      ZOrder		      11
+      BackgroundColor	      "[0.000000, 0.317647, 0.584314]"
+      LibraryVersion	      "1.163"
+      SourceBlock	      "DSPBABase/AvalonMMSlaveSettings"
+      SourceType	      "DSP Builder Advanced Blockset Avalon MM Slave Settings Block"
+      ContentPreviewEnabled   off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "BusStimulus"
+      SID		      "873"
+      Ports		      [4, 2]
+      Position		      [405, 656, 595, 719]
+      ZOrder		      670
+      LibraryVersion	      "1.84"
+      SourceBlock	      "DSPBAModelBus/BusStimulus"
+      SourceType	      "DSP Builder Advanced Blockset BusStimulus"
+      SampleTime	      "1"
+      version		      "20140122"
+      hasreaden		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "BusStimulusFileReader"
+      SID		      "874"
+      Ports		      [2, 9]
+      Position		      [135, 642, 345, 778]
+      ZOrder		      672
+      LibraryVersion	      "1.84"
+      SourceBlock	      "DSPBAModelBus/BusStimulusFileReader"
+      SourceType	      "DSP Builder Advanced Blockset BusStimulusFileReader"
+      enabled		      on
+      filename		      "goertzel_stimuli.stm"
+      logfilename	      "goertzel_stimuli.log"
+      spacewidth	      "2"
+      addrwidth		      "15"
+      datawidth		      "32"
+      SampleTime	      "1"
+      version		      "20140124"
+      hasreaden		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Control"
+      SID		      "3"
+      Ports		      []
+      Position		      [260, 115, 415, 180]
+      ZOrder		      -3
+      ShowName		      off
+      LibraryVersion	      "1.163"
+      SourceBlock	      "DSPBABase/Control"
+      SourceType	      "DSP Builder Advanced Blockset Control Block"
+      generate		      on
+      language		      "VHDL"
+      destination	      "./rtl"
+      destination_gui	      "./rtl"
+      make_full_path	      off
+      path_is_relative	      on
+      autotestbench	      on
+      signaldepth	      "2"
+      coveragetestbench	      off
+      logs		      off
+      spacewidth	      "2"
+      spacenum		      "1"
+      addrwidth		      "15"
+      datawidth		      "32"
+      dataendian	      "Big Endian"
+      hierarchicalnames	      off
+      ramThresholdBits	      "-1"
+      distRamThresholdBits    "-1"
+      mlabThresholdBits	      "-1"
+      hardMultiplierThresholdLuts "-1"
+      version		      "20090407"
+      errorOnChanMismatch     "1"
+      errorOnGPIOMismatch     "0"
+      importModelsimResults   "0"
+      cycleAccurate	      off
+      reinterpretCastMult     off
+      paramFile		      "goertzel_spectrum_params.xml"
+    }
+    Block {
+      BlockType		      Delay
+      Name		      "Delay"
+      SID		      "875"
+      Ports		      [1, 1]
+      Position		      [480, 783, 515, 817]
+      ZOrder		      678
+      BlockMirror	      on
+      InputPortMap	      "u0"
+      DelayLength	      "1"
+    }
+    Block {
+      BlockType		      Delay
+      Name		      "Delay1"
+      SID		      "876"
+      Ports		      [1, 1]
+      Position		      [415, 818, 450, 852]
+      ZOrder		      679
+      BlockMirror	      on
+      InputPortMap	      "u0"
+      DelayLength	      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "EditParams"
+      SID		      "5"
+      Ports		      []
+      Position		      [700, 118, 749, 171]
+      ZOrder		      -5
+      BackgroundColor	      "[0.925490, 1.000000, 1.000000]"
+      ShowName		      off
+      LibraryVersion	      "1.163"
+      SourceBlock	      "DSPBABase/EditParams"
+      SourceType	      "DSP Builder Advanced Blockset Ignored Block"
+      ContentPreviewEnabled   off
+      version		      "20090407"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Run Modelsim"
+      SID		      "7"
+      Ports		      []
+      Position		      [572, 120, 622, 167]
+      ZOrder		      -7
+      ShowName		      off
+      LibraryVersion	      "1.163"
+      SourceBlock	      "DSPBABase/Run Modelsim"
+      SourceType	      "DSP Builder Advanced Blockset Ignored Block"
+      ContentPreviewEnabled   off
+      version		      "20090407"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Run QuartusII "
+      SID		      "8"
+      Ports		      []
+      Position		      [637, 121, 687, 168]
+      ZOrder		      -8
+      ShowName		      off
+      LibraryVersion	      "1.163"
+      SourceBlock	      "DSPBABase/Quartus Prime"
+      SourceType	      "DSP Builder Advanced Blockset Ignored Block"
+      ContentPreviewEnabled   off
+      version		      "20090407"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      "877"
+      Ports		      [2]
+      Position		      [700, 660, 725, 720]
+      ZOrder		      671
+      ScopeSpecificationString "C++SS(StrPVP('Location','[1, 80, 1365, 742]'),StrPVP('Open','off'),MxPVP('AxesTitles',"
+      "24,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',28,'struct(''Figur"
+      "eColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1"
+      ";0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''Marker"
+      "Styles'',''none|none|none|none|none|none'')'),StrPVP('ShowLegends','off'),StrPVP('YMin','-5~-5'),StrPVP('YMax','"
+      "5~5'),StrPVP('SaveName','ScopeData2'),StrPVP('DataFormat','StructureWithTime'),StrPVP('BlockParamSampleTime','0'"
+      "),StrPVP('ScrollMode','off'),StrPVP('LimitDataPoints','on'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInp"
+      "ut','off'))"
+      NumInputPorts	      "2"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Signals"
+      SID		      "12"
+      Ports		      []
+      Position		      [425, 115, 561, 179]
+      ZOrder		      -12
+      ShowName		      off
+      LibraryVersion	      "1.163"
+      SourceBlock	      "DSPBABase/Signals"
+      SourceType	      "DSP Builder Advanced Blockset Signals Block"
+      ContentPreviewEnabled   off
+      clk		      "clk"
+      freq		      "goertzel_spectrum_param.ClockRate "
+      margin		      "goertzel_spectrum_param.ClockMargin"
+      rst		      "areset"
+      rstactive		      "High"
+      bus		      "bus"
+      enbusclock	      on
+      busfreq		      "61.44"
+      bussync		      on
+      version		      "20090407"
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      SID		      "878"
+      Position		      [355, 640, 375, 660]
+      ZOrder		      673
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator1"
+      SID		      "879"
+      Position		      [380, 715, 400, 735]
+      ZOrder		      674
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator2"
+      SID		      "880"
+      Position		      [380, 730, 400, 750]
+      ZOrder		      675
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator3"
+      SID		      "881"
+      Position		      [380, 745, 400, 765]
+      ZOrder		      676
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator4"
+      SID		      "882"
+      Position		      [380, 760, 400, 780]
+      ZOrder		      677
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator5"
+      SID		      "1642"
+      Position		      [705, 385, 725, 405]
+      ZOrder		      807
+      ShowName		      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "goertzel_spectrum"
+      SID		      "16"
+      Ports		      [5, 1]
+      Position		      [480, 225, 630, 565]
+      ZOrder		      -16
+      BackgroundColor	      "[0.494118, 0.756863, 1.000000]"
+      RequestExecContextInheritance off
+      Variant		      off
+      System {
+	Name			"goertzel_spectrum"
+	Location		[0, 25, 1920, 1055]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"111"
+	Block {
+	  BlockType		  Inport
+	  Name			  "v"
+	  SID			  "1585"
+	  Position		  [60, 322, 80, 338]
+	  ZOrder		  880
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c"
+	  SID			  "1586"
+	  Position		  [60, 367, 80, 383]
+	  ZOrder		  879
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "d"
+	  SID			  "1587"
+	  Position		  [60, 412, 80, 428]
+	  ZOrder		  881
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "sop"
+	  SID			  "1588"
+	  Position		  [60, 457, 80, 473]
+	  ZOrder		  882
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "eop"
+	  SID			  "1589"
+	  Position		  [60, 502, 80, 518]
+	  ZOrder		  883
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "AStInput"
+	  SID			  "1590"
+	  Ports			  [6, 6]
+	  Position		  [130, 260, 290, 535]
+	  ZOrder		  878
+	  LibraryVersion	  "1.24"
+	  LinkData {
+	    BlockName		    "ChannelOut"
+	    DialogParameters {
+	      value		      "3"
+	      latency		      "1"
+	      packetBeginEnabled      "off"
+	    }
+	  }
+	  SourceBlock		  "DSPBAAvalonST/AStInput"
+	  SourceType		  "DSP Builder Advanced Blockset Avalon Streaming Input Interface"
+	  ContentPreviewEnabled	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "And2"
+	  SID			  "1696"
+	  Ports			  [2, 1]
+	  Position		  [1265, 683, 1285, 747]
+	  ZOrder		  895
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/And"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "and"
+	  nInputs		  "2"
+	  nOutputs		  "1"
+	  omode			  "Inherit via internal rule"
+	  otype			  "sfix(16)"
+	  scale			  "2^-15"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "0"
+	  inPortNames		  "[' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('&');"
+	  style			  "Optimised"
+	  visibilities		  "8+2"
+	  version		  "20090407"
+	}
+	Block {
+	  BlockType		  ComplexToRealImag
+	  Name			  "Complex to\nReal-Imag"
+	  SID			  "154"
+	  Ports			  [1, 2]
+	  Position		  [825, 258, 855, 287]
+	  ZOrder		  683
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Const"
+	  SID			  "1006"
+	  Ports			  [0, 1]
+	  Position		  [960, 160, 995, 190]
+	  ZOrder		  732
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/Const"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "const"
+	  nInputs		  "0"
+	  nOutputs		  "1"
+	  omode			  "boolean"
+	  otype			  "sfix(16)"
+	  scale			  "2^-15"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "0"
+	  inPortNames		  "['+'; '+';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('%s', num2str(value));"
+	  style			  "Optimised"
+	  visibilities		  "8 + 1024"
+	  floatPrecision	  "float32_m23"
+	  version		  "20120820"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Const1"
+	  SID			  "1007"
+	  Ports			  [0, 1]
+	  Position		  [970, 425, 1005, 455]
+	  ZOrder		  733
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/Const"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "const"
+	  nInputs		  "0"
+	  nOutputs		  "1"
+	  omode			  "boolean"
+	  otype			  "sfix(16)"
+	  scale			  "2^-15"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "0"
+	  inPortNames		  "['+'; '+';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('%s', num2str(value));"
+	  style			  "Optimised"
+	  visibilities		  "8 + 1024"
+	  floatPrecision	  "float32_m23"
+	  version		  "20120820"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Const2"
+	  SID			  "1008"
+	  Ports			  [0, 1]
+	  Position		  [960, 205, 995, 235]
+	  ZOrder		  734
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/Const"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "const"
+	  nInputs		  "0"
+	  nOutputs		  "1"
+	  omode			  "Specify via dialog"
+	  otype			  "ufix(8)"
+	  scale			  "2^-0"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "0"
+	  inPortNames		  "['+'; '+';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('%s', num2str(value));"
+	  style			  "Optimised"
+	  visibilities		  "8 + 1024"
+	  floatPrecision	  "float32_m23"
+	  version		  "20120820"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Const3"
+	  SID			  "1009"
+	  Ports			  [0, 1]
+	  Position		  [970, 470, 1005, 500]
+	  ZOrder		  735
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/Const"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "const"
+	  nInputs		  "0"
+	  nOutputs		  "1"
+	  omode			  "Specify via dialog"
+	  otype			  "ufix(8)"
+	  scale			  "2^-0"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "0"
+	  inPortNames		  "['+'; '+';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('%s', num2str(value));"
+	  style			  "Optimised"
+	  visibilities		  "8 + 1024"
+	  floatPrecision	  "float32_m23"
+	  version		  "20120820"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Const5"
+	  SID			  "1591"
+	  Ports			  [0, 1]
+	  Position		  [35, 270, 60, 300]
+	  ZOrder		  885
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/Const"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "const"
+	  nInputs		  "0"
+	  nOutputs		  "1"
+	  omode			  "Inherit via internal rule"
+	  otype			  "sfix(16)"
+	  scale			  "2^-15"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "1"
+	  inPortNames		  "['+'; '+';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('%s', num2str(value));"
+	  style			  "Optimised"
+	  visibilities		  "8 + 1024"
+	  floatPrecision	  "float32_m23"
+	  version		  "20120820"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Device"
+	  SID			  "21"
+	  Ports			  []
+	  Position		  [310, 90, 424, 181]
+	  ZOrder		  -5
+	  BackgroundColor	  "[0.843137, 0.839216, 0.666667]"
+	  ShowName		  off
+	  LibraryVersion	  "1.163"
+	  SourceBlock		  "DSPBABase/Device"
+	  SourceType		  "DSP Builder Advanced Blockset Device Block"
+	  ContentPreviewEnabled	  off
+	  family		  "Arria 10"
+	  deviceMember		  "Arria 10"
+	  stratix4device	  "Stratix IV GX"
+	  hardcopy4device	  "HardCopy IV E"
+	  stratix5device	  "Stratix V GX"
+	  device		  "10AS066N2F40I1SGES"
+	  speed			  "1"
+	  stratixSpeed		  "-5"
+	  stratix2Speed		  "-3"
+	  stratix3Speed		  "-3"
+	  stratix4gxSpeed	  "-2"
+	  stratix4gtSpeed	  "-1"
+	  cyclone2Speed		  "-6"
+	  cyclone3Speed		  "-7"
+	  arria2Speed		  "-4"
+	  cyclone4eSpeed	  "-8"
+	  stratix5Speed		  "-3"
+	  arria5Speed		  "-4"
+	  arriaSpeed		  "-6"
+	  cyclone3lsSpeed	  "-7"
+	  cyclone5Speed		  "-6"
+	  arria2gzSpeed		  "-3"
+	  nightFurySpeed	  "-2"
+	  ecp2Speed		  "-7"
+	  hardcopycompat	  off
+	  version		  "20140217"
+	  max10flashmode	  "off"
+	  max10nomeminit	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Imag_filter"
+	  SID			  "1546"
+	  Ports			  [5, 4]
+	  Position		  [1040, 418, 1215, 642]
+	  ZOrder		  867
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "Imag_filter"
+	    Location		    [0, 25, 1920, 1055]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "124"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vld_in"
+	      SID		      "1547"
+	      Position		      [20, 223, 50, 237]
+	      ZOrder		      10
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Ch_in"
+	      SID		      "1548"
+	      Position		      [20, 263, 50, 277]
+	      ZOrder		      11
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "data_in"
+	      SID		      "1549"
+	      Position		      [20, 303, 50, 317]
+	      ZOrder		      12
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "coeff_in"
+	      SID		      "1550"
+	      Position		      [20, 343, 50, 357]
+	      ZOrder		      13
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "filter_flush"
+	      SID		      "1551"
+	      Position		      [20, 383, 50, 397]
+	      ZOrder		      22
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ChannelIn"
+	      SID		      "1552"
+	      Ports		      [5, 5]
+	      Position		      [185, 214, 230, 406]
+	      ZOrder		      3
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/ChannelIn"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "channelin"
+	      nInputs		      "dspba_internal_get_channel_ports(gcb)"
+	      nOutputs		      "dspba_internal_get_channel_ports(gcb)"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "3"
+	      inPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; '"
+	      "H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      outPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; "
+	      "'H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('In');"
+	      style		      "Optimised"
+	      dataSignals	      "3"
+	      foldingEnabled	      off
+	      channels		      "1"
+	      sampleRate	      "200"
+	      packetBeginPresent      off
+	      packetBeginEnabled      "off"
+	      visibilities	      "dspba_ChannelInVis(gcb)"
+	      latencyCorrection	      "0"
+	      version		      "20141013"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ChannelOut"
+	      SID		      "1553"
+	      Ports		      [4, 4]
+	      Position		      [1315, 207, 1365, 358]
+	      ZOrder		      4
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/ChannelOut"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "channelout"
+	      nInputs		      "dspba_internal_get_channel_ports(gcb)"
+	      nOutputs		      "dspba_internal_get_channel_ports(gcb)"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "2"
+	      inPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; '"
+	      "H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      outPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; "
+	      "'H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('Out%s', AdvDSPBChannelOutDisplay(latency));"
+	      style		      "Optimised"
+	      dataSignals	      "2"
+	      foldingEnabled	      off
+	      channels		      "1"
+	      sampleRate	      "200"
+	      packetBeginPresent      off
+	      packetBeginEnabled      "off"
+	      visibilities	      "dspba_ChannelOutVis(gcb)"
+	      latency		      "6"
+	      latencyCorrection	      "0"
+	      version		      "20141013"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const"
+	      SID		      "1554"
+	      Ports		      [0, 1]
+	      Position		      [325, 242, 360, 278]
+	      ZOrder		      47
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "sfix(32)"
+	      scale		      "2^-16"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const1"
+	      SID		      "1555"
+	      Ports		      [0, 1]
+	      Position		      [635, 242, 670, 278]
+	      ZOrder		      49
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "sfix(32)"
+	      scale		      "2^-16"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Mux"
+	      SID		      "1556"
+	      Ports		      [3, 1]
+	      Position		      [390, 173, 440, 277]
+	      ZOrder		      46
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Mux"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "mux"
+	      nInputs		      "evalAionMaskParam(gcb,'value',1)+1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "2"
+	      inPortNames	      "['s '; 'd0'; 'd1'; 'd2'; 'd3'; 'd4'; 'd5'; 'd6'; 'd7'; 'd8'; 'd9';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', primtype);"
+	      style		      "Optimised"
+	      visibilities	      "1032"
+	      version		      "20131025"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Mux1"
+	      SID		      "1557"
+	      Ports		      [3, 1]
+	      Position		      [700, 173, 750, 277]
+	      ZOrder		      48
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Mux"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "mux"
+	      nInputs		      "evalAionMaskParam(gcb,'value',1)+1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "2"
+	      inPortNames	      "['s '; 'd0'; 'd1'; 'd2'; 'd3'; 'd4'; 'd5'; 'd6'; 'd7'; 'd8'; 'd9';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', primtype);"
+	      style		      "Optimised"
+	      visibilities	      "1032"
+	      version		      "20131025"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay1"
+	      SID		      "1558"
+	      Ports		      [1, 1]
+	      Position		      [800, 207, 835, 243]
+	      ZOrder		      50
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay2"
+	      SID		      "1559"
+	      Ports		      [1, 1]
+	      Position		      [700, 410, 750, 460]
+	      ZOrder		      45
+	      BlockMirror	      on
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "9"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay3"
+	      SID		      "1560"
+	      Ports		      [1, 1]
+	      Position		      [560, 207, 595, 243]
+	      ZOrder		      51
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "3"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay4"
+	      SID		      "1561"
+	      Ports		      [1, 1]
+	      Position		      [460, 207, 495, 243]
+	      ZOrder		      54
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay5"
+	      SID		      "1562"
+	      Ports		      [1, 1]
+	      Position		      [255, 337, 280, 363]
+	      ZOrder		      55
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "3"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem"
+	      SID		      "1679"
+	      Ports		      [4, 1]
+	      Position		      [1010, 160, 1075, 335]
+	      ZOrder		      57
+	      RequestExecContextInheritance off
+	      Variant		      off
+	      System {
+		Name			"Subsystem"
+		Location		[-8, 0, 1916, 1056]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"292"
+		Block {
+		  BlockType		  Inport
+		  Name			  "y2_in"
+		  SID			  "1680"
+		  Position		  [460, 103, 490, 117]
+		  ZOrder		  42
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "data_in"
+		  SID			  "1681"
+		  Position		  [460, 43, 490, 57]
+		  ZOrder		  43
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "coeff"
+		  SID			  "1682"
+		  Position		  [460, 173, 490, 187]
+		  ZOrder		  44
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "y1_in"
+		  SID			  "1683"
+		  Position		  [460, 148, 490, 162]
+		  ZOrder		  47
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Add"
+		  SID			  "1684"
+		  Ports			  [3, 1]
+		  Position		  [745, 21, 815, 199]
+		  ZOrder		  40
+		  ShowName		  off
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Add"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "add"
+		  nInputs		  "evalAionMaskParam(gcb,'value',1)"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule with word growth"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "3"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('+');"
+		  style			  "Optimised"
+		  visibilities		  "1032+2^17+2^18+2^19"
+		  genFPC		  off
+		  floatRounding		  "correct"
+		  advOptions		  "[]"
+		  version		  "20130821"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Convert"
+		  SID			  "1685"
+		  Ports			  [1, 1]
+		  Position		  [865, 98, 915, 122]
+		  ZOrder		  32
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Convert"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "convert"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Specify via dialog"
+		  otype			  "sfix(32)"
+		  scale			  "2^-16"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "round([0:255]/17)"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' '; 'c']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('convert');"
+		  style			  "Optimised"
+		  visibilities		  "8+64+256+2^17"
+		  clipdetect		  off
+		  floatPrecision	  "float32_m23"
+		  advOptions		  "[]"
+		  version		  "20130211"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Mult"
+		  SID			  "1686"
+		  Ports			  [2, 1]
+		  Position		  [655, 143, 705, 192]
+		  ZOrder		  7
+		  ShowName		  off
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Mult"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "mult"
+		  nInputs		  "2"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "0"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('X');"
+		  style			  "Optimised"
+		  visibilities		  "8+2^18+2^19"
+		  floatPrecision	  "float32_m23"
+		  floatRounding		  "correct"
+		  advOptions		  "[]"
+		  version		  "20130115"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Negate"
+		  SID			  "1687"
+		  Ports			  [1, 1]
+		  Position		  [655, 89, 705, 131]
+		  ZOrder		  39
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Negate"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "negate"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "0"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('-x');"
+		  style			  "Optimised"
+		  visibilities		  "8"
+		  version		  "20090407"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SampleDelay1"
+		  SID			  "1688"
+		  Ports			  [1, 1]
+		  Position		  [560, 32, 595, 68]
+		  ZOrder		  52
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/SampleDelay"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "sampdelay"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "3"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "dpoly(1, eye(1,value+1), 'z')"
+		  style			  "Optimised"
+		  visibilities		  "8 + 1024 + 2^17 + 2^18"
+		  flexible		  off
+		  slackgroup		  "0"
+		  augmented		  "0"
+		  version		  "20090407"
+		  advOptions		  "[]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SampleDelay3"
+		  SID			  "1689"
+		  Ports			  [1, 1]
+		  Position		  [560, 162, 595, 198]
+		  ZOrder		  54
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/SampleDelay"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "sampdelay"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "3"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "dpoly(1, eye(1,value+1), 'z')"
+		  style			  "Optimised"
+		  visibilities		  "8 + 1024 + 2^17 + 2^18"
+		  flexible		  off
+		  slackgroup		  "0"
+		  augmented		  "0"
+		  version		  "20090407"
+		  advOptions		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "y0_out"
+		  SID			  "1691"
+		  Position		  [1060, 103, 1090, 117]
+		  ZOrder		  48
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Mult"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "Negate"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "Convert"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "data_in"
+		  SrcPort		  1
+		  DstBlock		  "SampleDelay1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  5
+		  SrcBlock		  "coeff"
+		  SrcPort		  1
+		  DstBlock		  "SampleDelay3"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  6
+		  SrcBlock		  "y1_in"
+		  SrcPort		  1
+		  DstBlock		  "Mult"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "Convert"
+		  SrcPort		  1
+		  DstBlock		  "y0_out"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  12
+		  SrcBlock		  "SampleDelay1"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  15
+		  SrcBlock		  "y2_in"
+		  SrcPort		  1
+		  DstBlock		  "Negate"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  18
+		  SrcBlock		  "SampleDelay3"
+		  SrcPort		  1
+		  DstBlock		  "Mult"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SynthesisInfo"
+	      SID		      "1578"
+	      Ports		      []
+	      Position		      [770, 40, 915, 84]
+	      ZOrder		      23
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SynthesisInfo"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "synthinfo"
+	      nInputs		      "0"
+	      nOutputs		      "0"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Truncate"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "99"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim_ctrl.jpg"
+	      text		      "fprintf('Style=%s', style);"
+	      style		      "Scheduled"
+	      visibilities	      "2^15+2^17+2^18+2^19"
+	      constraintInUse	      off
+	      constraintRelation      ">"
+	      constraintLimit	      "2"
+	      bitAccurate	      off
+	      version		      "20150220"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vld_out"
+	      SID		      "1579"
+	      Position		      [1465, 223, 1495, 237]
+	      ZOrder		      14
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Ch_out"
+	      SID		      "1580"
+	      Position		      [1465, 258, 1495, 272]
+	      ZOrder		      15
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "data_out0"
+	      SID		      "1581"
+	      Position		      [1465, 293, 1495, 307]
+	      ZOrder		      16
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "data_out1"
+	      SID		      "1582"
+	      Position		      [1465, 328, 1495, 342]
+	      ZOrder		      17
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      2
+	      DstBlock		      "Ch_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      2
+	      Points		      [64, 0; 0, -145; 946, 0; 0, 140]
+	      DstBlock		      "ChannelOut"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Ch_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "data_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      1
+	      DstBlock		      "Vld_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      3
+	      DstBlock		      "data_out0"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "coeff_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "Vld_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      1
+	      Points		      [44, 0; 0, -119; 982, 0; 0, 119]
+	      DstBlock		      "ChannelOut"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      4
+	      DstBlock		      "data_out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      15
+	      SrcBlock		      "filter_flush"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      5
+	    }
+	    Line {
+	      ZOrder		      83
+	      SrcBlock		      "Subsystem"
+	      SrcPort		      1
+	      Points		      [120, 0; 0, 50]
+	      Branch {
+		ZOrder			19
+		DstBlock		"ChannelOut"
+		DstPort			3
+	      }
+	      Branch {
+		ZOrder			22
+		Points			[0, 135]
+		DstBlock		"SampleDelay2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      79
+	      SrcBlock		      "SampleDelay1"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, 12; 77, 0; 0, -57]
+	      DstBlock		      "Subsystem"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      78
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      3
+	      Points		      [542, 0; 0, -116; 116, 0; 0, 31]
+	      DstBlock		      "Subsystem"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      29
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      4
+	      DstBlock		      "SampleDelay5"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      30
+	      SrcBlock		      "SampleDelay2"
+	      SrcPort		      1
+	      Points		      [-382, 0; 0, -210]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      31
+	      SrcBlock		      "Const"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      32
+	      SrcBlock		      "Const1"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      33
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "SampleDelay1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      34
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      5
+	      Points		      [71, 0]
+	      Branch {
+		ZOrder			35
+		Points			[0, 20; 309, 0; 0, -220]
+		DstBlock		"Mux1"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			38
+		Points			[0, -200]
+		DstBlock		"Mux"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      39
+	      SrcBlock		      "SampleDelay3"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      40
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "SampleDelay4"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      41
+	      SrcBlock		      "SampleDelay4"
+	      SrcPort		      1
+	      Points		      [19, 0]
+	      Branch {
+		ZOrder			42
+		DstBlock		"SampleDelay3"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			43
+		Points			[0, 90]
+		Branch {
+		  ZOrder		  81
+		  DstBlock		  "Subsystem"
+		  DstPort		  4
+		}
+		Branch {
+		  ZOrder		  44
+		  Points		  [0, 47; 778, 0; 0, -27]
+		  DstBlock		  "ChannelOut"
+		  DstPort		  4
+		}
+	      }
+	    }
+	    Line {
+	      ZOrder		      80
+	      SrcBlock		      "SampleDelay5"
+	      SrcPort		      1
+	      Points		      [609, 0; 0, -80]
+	      DstBlock		      "Subsystem"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Not"
+	  SID			  "1697"
+	  Ports			  [1, 1]
+	  Position		  [1225, 687, 1245, 713]
+	  ZOrder		  894
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/Not"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "not"
+	  nInputs		  "1"
+	  nOutputs		  "1"
+	  omode			  "Inherit via internal rule"
+	  otype			  "sfix(16)"
+	  scale			  "2^-15"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "0"
+	  inPortNames		  "[' '; ' ';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('~');"
+	  style			  "Optimised"
+	  visibilities		  "8"
+	  version		  "20090407"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Real_filter"
+	  SID			  "937"
+	  Ports			  [5, 4]
+	  Position		  [1040, 153, 1215, 377]
+	  ZOrder		  730
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "Real_filter"
+	    Location		    [0, 28, 1920, 1058]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "124"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vld_in"
+	      SID		      "938"
+	      Position		      [20, 223, 50, 237]
+	      ZOrder		      10
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Ch_in"
+	      SID		      "939"
+	      Position		      [20, 263, 50, 277]
+	      ZOrder		      11
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "data_in"
+	      SID		      "940"
+	      Position		      [20, 303, 50, 317]
+	      ZOrder		      12
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "coeff_in"
+	      SID		      "941"
+	      Position		      [20, 343, 50, 357]
+	      ZOrder		      13
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "filter_flush"
+	      SID		      "942"
+	      Position		      [20, 383, 50, 397]
+	      ZOrder		      22
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ChannelIn"
+	      SID		      "943"
+	      Ports		      [5, 5]
+	      Position		      [185, 214, 230, 406]
+	      ZOrder		      3
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/ChannelIn"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "channelin"
+	      nInputs		      "dspba_internal_get_channel_ports(gcb)"
+	      nOutputs		      "dspba_internal_get_channel_ports(gcb)"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "3"
+	      inPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; '"
+	      "H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      outPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; "
+	      "'H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('In');"
+	      style		      "Optimised"
+	      dataSignals	      "3"
+	      foldingEnabled	      off
+	      channels		      "1"
+	      sampleRate	      "200"
+	      packetBeginPresent      off
+	      packetBeginEnabled      "off"
+	      visibilities	      "dspba_ChannelInVis(gcb)"
+	      latencyCorrection	      "0"
+	      version		      "20141013"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ChannelOut"
+	      SID		      "944"
+	      Ports		      [4, 4]
+	      Position		      [1315, 207, 1365, 358]
+	      ZOrder		      4
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/ChannelOut"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "channelout"
+	      nInputs		      "dspba_internal_get_channel_ports(gcb)"
+	      nOutputs		      "dspba_internal_get_channel_ports(gcb)"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "2"
+	      inPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; '"
+	      "H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      outPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; "
+	      "'H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('Out%s', AdvDSPBChannelOutDisplay(latency));"
+	      style		      "Optimised"
+	      dataSignals	      "2"
+	      foldingEnabled	      off
+	      channels		      "1"
+	      sampleRate	      "200"
+	      packetBeginPresent      off
+	      packetBeginEnabled      "off"
+	      visibilities	      "dspba_ChannelOutVis(gcb)"
+	      latency		      "6"
+	      latencyCorrection	      "0"
+	      version		      "20141013"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const"
+	      SID		      "945"
+	      Ports		      [0, 1]
+	      Position		      [325, 242, 360, 278]
+	      ZOrder		      47
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "sfix(32)"
+	      scale		      "2^-16"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const1"
+	      SID		      "946"
+	      Ports		      [0, 1]
+	      Position		      [635, 242, 670, 278]
+	      ZOrder		      49
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "sfix(32)"
+	      scale		      "2^-16"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Mux"
+	      SID		      "948"
+	      Ports		      [3, 1]
+	      Position		      [390, 173, 440, 277]
+	      ZOrder		      46
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Mux"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "mux"
+	      nInputs		      "evalAionMaskParam(gcb,'value',1)+1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "2"
+	      inPortNames	      "['s '; 'd0'; 'd1'; 'd2'; 'd3'; 'd4'; 'd5'; 'd6'; 'd7'; 'd8'; 'd9';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', primtype);"
+	      style		      "Optimised"
+	      visibilities	      "1032"
+	      version		      "20131025"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Mux1"
+	      SID		      "949"
+	      Ports		      [3, 1]
+	      Position		      [700, 173, 750, 277]
+	      ZOrder		      48
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Mux"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "mux"
+	      nInputs		      "evalAionMaskParam(gcb,'value',1)+1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "2"
+	      inPortNames	      "['s '; 'd0'; 'd1'; 'd2'; 'd3'; 'd4'; 'd5'; 'd6'; 'd7'; 'd8'; 'd9';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', primtype);"
+	      style		      "Optimised"
+	      visibilities	      "1032"
+	      version		      "20131025"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay1"
+	      SID		      "1022"
+	      Ports		      [1, 1]
+	      Position		      [800, 207, 835, 243]
+	      ZOrder		      50
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay2"
+	      SID		      "952"
+	      Ports		      [1, 1]
+	      Position		      [700, 410, 750, 460]
+	      ZOrder		      45
+	      BlockMirror	      on
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "9"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay3"
+	      SID		      "1023"
+	      Ports		      [1, 1]
+	      Position		      [560, 207, 595, 243]
+	      ZOrder		      51
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "3"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay4"
+	      SID		      "1200"
+	      Ports		      [1, 1]
+	      Position		      [460, 207, 495, 243]
+	      ZOrder		      54
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay5"
+	      SID		      "1295"
+	      Ports		      [1, 1]
+	      Position		      [255, 337, 280, 363]
+	      ZOrder		      55
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "3"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Scope"
+	      SID		      "953"
+	      Ports		      [7]
+	      Position		      [1375, 473, 1425, 547]
+	      ZOrder		      34
+	      ScopeSpecificationString "C++SS(StrPVP('Location','[10, 60, 1918, 1050]'),StrPVP('Open','off'),StrPVP('ZoomMode"
+	      "','xonly'),MxPVP('AxesTitles',24,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''"
+	      "%<SignalLabel>'',''axes4'',''%<SignalLabel>'',''axes5'',''%<SignalLabel>'',''axes6'',''%<SignalLabel>'',''axes7"
+	      "'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',28,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 "
+	      "0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''"
+	      "-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'"
+	      "),StrPVP('ShowLegends','off'),StrPVP('YMin','-1~-0~-1~-1~1~-1~-1'),StrPVP('YMax','2~2~1~1~3~2~1'),StrPVP('SaveT"
+	      "oWorkspace','on'),StrPVP('SaveName','ScopeData5'),StrPVP('DataFormat','StructureWithTime'),StrPVP('LimitDataPoi"
+	      "nts','off'),StrPVP('BlockParamSampleTime','0'),StrPVP('ScrollMode','off'),StrPVP('Decimation','1'),StrPVP('Bloc"
+	      "kParamSampleInput','off'))"
+	      NumInputPorts	      "7"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Scope1"
+	      SID		      "1102"
+	      Ports		      [4]
+	      Position		      [1470, 389, 1510, 461]
+	      ZOrder		      52
+	      ScopeSpecificationString "C++SS(StrPVP('Location','[1, 49, 1921, 1039]'),StrPVP('Open','off'),StrPVP('ZoomMode'"
+	      ",'xonly'),MxPVP('AxesTitles',24,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''%"
+	      "<SignalLabel>'',''axes4'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',28,'struct(''FigureColor'',''[0.5 0.5 0.5"
+	      "]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0"
+	      " 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|"
+	      "none|none|none|none'')'),StrPVP('ShowLegends','off'),StrPVP('YMin','-5~-5~-5~-5'),StrPVP('YMax','5~5~5~5'),StrP"
+	      "VP('SaveToWorkspace','on'),StrPVP('SaveName','ScopeData3'),StrPVP('DataFormat','StructureWithTime'),StrPVP('Lim"
+	      "itDataPoints','off'),StrPVP('ScrollMode','off'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+	      NumInputPorts	      "4"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem"
+	      SID		      "1666"
+	      Ports		      [4, 1]
+	      Position		      [1015, 155, 1080, 330]
+	      ZOrder		      56
+	      RequestExecContextInheritance off
+	      Variant		      off
+	      System {
+		Name			"Subsystem"
+		Location		[-8, 0, 1916, 1056]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"292"
+		Block {
+		  BlockType		  Inport
+		  Name			  "y2_in"
+		  SID			  "1667"
+		  Position		  [460, 103, 490, 117]
+		  ZOrder		  42
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "data_in"
+		  SID			  "1668"
+		  Position		  [460, 43, 490, 57]
+		  ZOrder		  43
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "coeff"
+		  SID			  "1669"
+		  Position		  [460, 173, 490, 187]
+		  ZOrder		  44
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "y1_in"
+		  SID			  "1670"
+		  Position		  [460, 148, 490, 162]
+		  ZOrder		  47
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Add"
+		  SID			  "1671"
+		  Ports			  [3, 1]
+		  Position		  [745, 21, 815, 199]
+		  ZOrder		  40
+		  ShowName		  off
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Add"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "add"
+		  nInputs		  "evalAionMaskParam(gcb,'value',1)"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule with word growth"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "3"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('+');"
+		  style			  "Optimised"
+		  visibilities		  "1032+2^17+2^18+2^19"
+		  genFPC		  off
+		  floatRounding		  "correct"
+		  advOptions		  "[]"
+		  version		  "20130821"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Convert"
+		  SID			  "1672"
+		  Ports			  [1, 1]
+		  Position		  [865, 98, 915, 122]
+		  ZOrder		  32
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Convert"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "convert"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Specify via dialog"
+		  otype			  "sfix(32)"
+		  scale			  "2^-16"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "round([0:255]/17)"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' '; 'c']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('convert');"
+		  style			  "Optimised"
+		  visibilities		  "8+64+256+2^17"
+		  clipdetect		  off
+		  floatPrecision	  "float32_m23"
+		  advOptions		  "[]"
+		  version		  "20130211"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Mult"
+		  SID			  "1673"
+		  Ports			  [2, 1]
+		  Position		  [655, 143, 705, 192]
+		  ZOrder		  7
+		  ShowName		  off
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Mult"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "mult"
+		  nInputs		  "2"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "0"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('X');"
+		  style			  "Optimised"
+		  visibilities		  "8+2^18+2^19"
+		  floatPrecision	  "float32_m23"
+		  floatRounding		  "correct"
+		  advOptions		  "[]"
+		  version		  "20130115"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Negate"
+		  SID			  "1674"
+		  Ports			  [1, 1]
+		  Position		  [655, 89, 705, 131]
+		  ZOrder		  39
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/Negate"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "negate"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "0"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "fprintf('-x');"
+		  style			  "Optimised"
+		  visibilities		  "8"
+		  version		  "20090407"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SampleDelay1"
+		  SID			  "1675"
+		  Ports			  [1, 1]
+		  Position		  [560, 32, 595, 68]
+		  ZOrder		  52
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/SampleDelay"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "sampdelay"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "3"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "dpoly(1, eye(1,value+1), 'z')"
+		  style			  "Optimised"
+		  visibilities		  "8 + 1024 + 2^17 + 2^18"
+		  flexible		  off
+		  slackgroup		  "0"
+		  augmented		  "0"
+		  version		  "20090407"
+		  advOptions		  "[]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SampleDelay3"
+		  SID			  "1676"
+		  Ports			  [1, 1]
+		  Position		  [560, 162, 595, 198]
+		  ZOrder		  54
+		  LibraryVersion	  "1.432"
+		  SourceBlock		  "DSPBAPrim/SampleDelay"
+		  SourceType		  "DSP Builder Advanced Blockset primitive"
+		  primtype		  "sampdelay"
+		  nInputs		  "1"
+		  nOutputs		  "1"
+		  omode			  "Inherit via internal rule"
+		  otype			  "sfix(16)"
+		  scale			  "2^-15"
+		  rndmethod		  "Unbiased"
+		  factor		  "1"
+		  satmethod		  "Symmetric"
+		  shift_vec		  "[0 1 2 -1]"
+		  value			  "3"
+		  inPortNames		  "[' '; ' ';]"
+		  outPortNames		  "[' ']"
+		  dspbaimage		  "dspba_prim.jpg"
+		  text			  "dpoly(1, eye(1,value+1), 'z')"
+		  style			  "Optimised"
+		  visibilities		  "8 + 1024 + 2^17 + 2^18"
+		  flexible		  off
+		  slackgroup		  "0"
+		  augmented		  "0"
+		  version		  "20090407"
+		  advOptions		  "[]"
+		}
+		Block {
+		  BlockType		  Scope
+		  Name			  "Scope"
+		  SID			  "1677"
+		  Ports			  [5]
+		  Position		  [1010, 159, 1080, 241]
+		  ZOrder		  55
+		  ScopeSpecificationString "C++SS(StrPVP('Location','[188, 365, 512, 604]'),StrPVP('Open','off'),MxPVP('AxesTitles',"
+		  "24,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''%<SignalLabel>'',''axes4'',''%<Si"
+		  "gnalLabel>'',''axes5'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',28,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''"
+		  "AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''L"
+		  "ineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|no"
+		  "ne|none'')'),StrPVP('ShowLegends','off'),StrPVP('YMin','-5~-5~-5~-5~-5'),StrPVP('YMax','5~5~5~5~5'),StrPVP('SaveTo"
+		  "Workspace','on'),StrPVP('SaveName','ScopeData8'),StrPVP('DataFormat','StructureWithTime'),StrPVP('LimitDataPoints'"
+		  ",'off'),StrPVP('ScrollMode','off'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+		  NumInputPorts		  "5"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "y0_out"
+		  SID			  "1678"
+		  Position		  [1060, 103, 1090, 117]
+		  ZOrder		  48
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Mult"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "Negate"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "Convert"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "data_in"
+		  SrcPort		  1
+		  DstBlock		  "SampleDelay1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  5
+		  SrcBlock		  "coeff"
+		  SrcPort		  1
+		  DstBlock		  "SampleDelay3"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  6
+		  SrcBlock		  "y1_in"
+		  SrcPort		  1
+		  Points		  [142, 0]
+		  Branch {
+		    ZOrder		    7
+		    Points		    [0, 58; 203, 0; 0, -28]
+		    DstBlock		    "Scope"
+		    DstPort		    2
+		  }
+		  Branch {
+		    ZOrder		    8
+		    DstBlock		    "Mult"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "Convert"
+		  SrcPort		  1
+		  Points		  [44, 0]
+		  Branch {
+		    ZOrder		    10
+		    Points		    [0, 60]
+		    DstBlock		    "Scope"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    11
+		    DstBlock		    "y0_out"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  12
+		  SrcBlock		  "SampleDelay1"
+		  SrcPort		  1
+		  Points		  [29, 0]
+		  Branch {
+		    ZOrder		    13
+		    Points		    [0, 177; 358, 0; 0, -27]
+		    DstBlock		    "Scope"
+		    DstPort		    3
+		  }
+		  Branch {
+		    ZOrder		    14
+		    DstBlock		    "Add"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  15
+		  SrcBlock		  "y2_in"
+		  SrcPort		  1
+		  Points		  [128, 0]
+		  Branch {
+		    ZOrder		    16
+		    Points		    [0, 96; 230, 0; 0, 9]
+		    DstBlock		    "Scope"
+		    DstPort		    4
+		  }
+		  Branch {
+		    ZOrder		    17
+		    DstBlock		    "Negate"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  18
+		  SrcBlock		  "SampleDelay3"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    ZOrder		    19
+		    Points		    [0, 61; 380, 0]
+		    DstBlock		    "Scope"
+		    DstPort		    5
+		  }
+		  Branch {
+		    ZOrder		    20
+		    DstBlock		    "Mult"
+		    DstPort		    2
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SynthesisInfo"
+	      SID		      "966"
+	      Ports		      []
+	      Position		      [770, 40, 915, 84]
+	      ZOrder		      23
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SynthesisInfo"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "synthinfo"
+	      nInputs		      "0"
+	      nOutputs		      "0"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Truncate"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "99"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim_ctrl.jpg"
+	      text		      "fprintf('Style=%s', style);"
+	      style		      "Scheduled"
+	      visibilities	      "2^15+2^17+2^18+2^19"
+	      constraintInUse	      off
+	      constraintRelation      ">"
+	      constraintLimit	      "2"
+	      bitAccurate	      off
+	      version		      "20150220"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vld_out"
+	      SID		      "967"
+	      Position		      [1465, 223, 1495, 237]
+	      ZOrder		      14
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Ch_out"
+	      SID		      "968"
+	      Position		      [1465, 258, 1495, 272]
+	      ZOrder		      15
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "data_out0"
+	      SID		      "969"
+	      Position		      [1465, 293, 1495, 307]
+	      ZOrder		      16
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "data_out1"
+	      SID		      "970"
+	      Position		      [1465, 328, 1495, 342]
+	      ZOrder		      17
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      2
+	      DstBlock		      "Ch_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      2
+	      Points		      [64, 0; 0, -145; 946, 0; 0, 140]
+	      DstBlock		      "ChannelOut"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Ch_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "data_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      1
+	      DstBlock		      "Vld_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      3
+	      Points		      [37, 0]
+	      Branch {
+		ZOrder			94
+		Points			[0, 115]
+		DstBlock		"Scope1"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			93
+		DstBlock		"data_out0"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "coeff_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "Vld_in"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      1
+	      Points		      [44, 0; 0, -119; 982, 0; 0, 119]
+	      DstBlock		      "ChannelOut"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      4
+	      Points		      [20, 0]
+	      Branch {
+		ZOrder			97
+		Points			[0, 120]
+		DstBlock		"Scope1"
+		DstPort			4
+	      }
+	      Branch {
+		ZOrder			96
+		DstBlock		"data_out1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      143
+	      SrcBlock		      "filter_flush"
+	      SrcPort		      1
+	      DstBlock		      "ChannelIn"
+	      DstPort		      5
+	    }
+	    Line {
+	      ZOrder		      230
+	      SrcBlock		      "Subsystem"
+	      SrcPort		      1
+	      Points		      [33, 0]
+	      Branch {
+		ZOrder			232
+		Points			[0, -5; 82, 0; 0, 60]
+		Branch {
+		  ZOrder		  15
+		  Points		  [79, 0]
+		  Branch {
+		    ZOrder		    92
+		    Points		    [0, 95]
+		    DstBlock		    "Scope1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    87
+		    DstBlock		    "ChannelOut"
+		    DstPort		    3
+		  }
+		}
+		Branch {
+		  ZOrder		  16
+		  Points		  [0, 135]
+		  DstBlock		  "SampleDelay2"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		ZOrder			182
+		Points			[0, 285]
+		DstBlock		"Scope"
+		DstPort			6
+	      }
+	    }
+	    Line {
+	      ZOrder		      42
+	      SrcBlock		      "SampleDelay1"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -45; 95, 0]
+	      Branch {
+		ZOrder			222
+		Points			[0, -5]
+		DstBlock		"Subsystem"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			67
+		Points			[0, 330]
+		DstBlock		"Scope"
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      ZOrder		      20
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      3
+	      Points		      [542, 0; 0, -116; 202, 0; 0, 26]
+	      Branch {
+		ZOrder			225
+		Points			[0, 260]
+		DstBlock		"Scope"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			223
+		DstBlock		"Subsystem"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      23
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      4
+	      DstBlock		      "SampleDelay5"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      27
+	      SrcBlock		      "SampleDelay2"
+	      SrcPort		      1
+	      Points		      [-382, 0; 0, -210]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      29
+	      SrcBlock		      "Const"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      30
+	      SrcBlock		      "Const1"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      32
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "SampleDelay1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      141
+	      SrcBlock		      "ChannelIn"
+	      SrcPort		      5
+	      Points		      [71, 0]
+	      Branch {
+		ZOrder			142
+		Points			[0, 20; 309, 0]
+		Branch {
+		  ZOrder		  54
+		  Points		  [0, -220]
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  53
+		  Points		  [0, 80]
+		  DstBlock		  "Scope"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		ZOrder			39
+		Points			[0, -200]
+		DstBlock		"Mux"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      49
+	      SrcBlock		      "SampleDelay3"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      144
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "SampleDelay4"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      166
+	      SrcBlock		      "SampleDelay4"
+	      SrcPort		      1
+	      Points		      [19, 0]
+	      Branch {
+		ZOrder			163
+		DstBlock		"SampleDelay3"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			149
+		Points			[0, 75]
+		Branch {
+		  ZOrder		  164
+		  Points		  [0, 62; 742, 0]
+		  Branch {
+		    ZOrder		    162
+		    Points		    [0, 138]
+		    DstBlock		    "Scope"
+		    DstPort		    3
+		  }
+		  Branch {
+		    ZOrder		    161
+		    Points		    [36, 0]
+		    Branch {
+		    ZOrder		    160
+		    Points		    [0, -27]
+		    DstBlock		    "ChannelOut"
+		    DstPort		    4
+		    }
+		    Branch {
+		    ZOrder		    159
+		    Points		    [0, 73]
+		    DstBlock		    "Scope1"
+		    DstPort		    3
+		    }
+		  }
+		}
+		Branch {
+		  ZOrder		  156
+		  Points		  [390, 0; 0, 10]
+		  Branch {
+		    ZOrder		    227
+		    DstBlock		    "Subsystem"
+		    DstPort		    4
+		  }
+		  Branch {
+		    ZOrder		    168
+		    Points		    [0, 230]
+		    DstBlock		    "Scope"
+		    DstPort		    7
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      ZOrder		      219
+	      SrcBlock		      "SampleDelay5"
+	      SrcPort		      1
+	      Points		      [573, 0; 0, -100; 80, 0; 0, 15]
+	      Branch {
+		ZOrder			229
+		Points			[0, 255]
+		DstBlock		"Scope"
+		DstPort			5
+	      }
+	      Branch {
+		ZOrder			228
+		DstBlock		"Subsystem"
+		DstPort			3
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "SampleDelay1"
+	  SID			  "1700"
+	  Ports			  [1, 1]
+	  Position		  [1360, 702, 1385, 728]
+	  ZOrder		  897
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/SampleDelay"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "sampdelay"
+	  nInputs		  "1"
+	  nOutputs		  "1"
+	  omode			  "Inherit via internal rule"
+	  otype			  "sfix(16)"
+	  scale			  "2^-15"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "4"
+	  inPortNames		  "[' '; ' ';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "dpoly(1, eye(1,value+1), 'z')"
+	  style			  "Optimised"
+	  visibilities		  "8 + 1024 + 2^17 + 2^18"
+	  flexible		  off
+	  slackgroup		  "0"
+	  augmented		  "0"
+	  version		  "20090407"
+	  advOptions		  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "SampleDelay2"
+	  SID			  "1698"
+	  Ports			  [1, 1]
+	  Position		  [1185, 687, 1210, 713]
+	  ZOrder		  893
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/SampleDelay"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "sampdelay"
+	  nInputs		  "1"
+	  nOutputs		  "1"
+	  omode			  "Inherit via internal rule"
+	  otype			  "sfix(16)"
+	  scale			  "2^-15"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "1"
+	  inPortNames		  "[' '; ' ';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "dpoly(1, eye(1,value+1), 'z')"
+	  style			  "Optimised"
+	  visibilities		  "8 + 1024 + 2^17 + 2^18"
+	  flexible		  off
+	  slackgroup		  "0"
+	  augmented		  "0"
+	  version		  "20090407"
+	  advOptions		  "[]"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  SID			  "1646"
+	  Ports			  [3]
+	  Position		  [520, 545, 605, 715]
+	  ZOrder		  888
+	  ScopeSpecificationString "C++SS(StrPVP('Location','[10, 60, 1918, 1050]'),StrPVP('Open','off'),StrPVP('ZoomMode','x"
+	  "only'),MxPVP('AxesTitles',24,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''%<Signal"
+	  "Label>'')'),MxPVP('ScopeGraphics',28,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTick"
+	  "Color'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineW"
+	  "idths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'),StrPVP('ShowLegends','o"
+	  "ff'),StrPVP('YMin','-0.5~0.5~-0.00476074'),StrPVP('YMax','2~3~2'),StrPVP('SaveName','ScopeData1'),StrPVP('DataForma"
+	  "t','StructureWithTime'),StrPVP('LimitDataPoints','off'),StrPVP('ScrollMode','off'),StrPVP('Decimation','1'),StrPVP("
+	  "'BlockParamSampleInput','off'))"
+	  NumInputPorts		  "3"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope1"
+	  SID			  "1699"
+	  Ports			  [5]
+	  Position		  [1570, 99, 1610, 171]
+	  ZOrder		  896
+	  ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr."
+	  "Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sources"
+	  "','WiredSimulink',true,'DataLogging',true,'DataLoggingVariableName','ScopeData_final','DataLoggingSaveFormat','Stru"
+	  "ctureWithTime','DataLoggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Time Dom"
+	  "ain',true,'SerializedDisplays',{struct('MinYLimReal','-158.46995','MaxYLimReal','158.7741','YLabelReal','','MinYLim"
+	  "Mag',' 0.00000','MaxYLimMag','158.7741','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Ax"
+	  "esColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666"
+	  "6666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83137254"
+	  "9019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509"
+	  "80392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineN"
+	  "ames',{{'Real_filter/3'}},'ShowContent',true,'Placement',1),struct('MinYLimReal','-158.46995','MaxYLimReal','158.77"
+	  "41','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagP"
+	  "hase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder"
+	  "',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.39215686274"
+	  "5098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.07450980"
+	  "39215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'Num"
+	  "Lines',1,'LineNames',{{'Real_filter/4'}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-0.00055','MaxYLim"
+	  "Real','0.00054','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',tr"
+	  "ue,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922]"
+	  ",'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0"
+	  ".392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;"
+	  "1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelName"
+	  "s',{{}},'NumLines',1,'LineNames',{{'Imag_filter/3'}},'ShowContent',true,'Placement',3),struct('MinYLimReal','-0.000"
+	  "55','MaxYLimReal','0.00054','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',tru"
+	  "e,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.6862"
+	  "74509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607"
+	  "8431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.058823529"
+	  "4117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefine"
+	  "dChannelNames',{{}},'NumLines',1,'LineNames',{{'Imag_filter/4'}},'ShowContent',true,'Placement',4),struct('MinYLimR"
+	  "eal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off'"
+	  ",'XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.6862745098"
+	  "03922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.4117647058"
+	  "82353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1"
+	  ";0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}}"
+	  ",'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'SampleDelay1'}},'ShowContent',true,'Placement',5)},'Dis"
+	  "playPropertyDefaults',struct('YLabelReal','','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',fals"
+	  "e,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0"
+	  "666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831"
+	  "372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0"
+	  ".650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'"
+	  "LineNames',{{[]}},'ShowContent',true,'Placement',1),'DisplayLayoutDimensions',[5 1]),extmgr.Configuration('Tools','"
+	  "Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true"
+	  ",'Version','2016a')),'Version','2016a','Location',[4 121 1920 1044])"
+	  NumInputPorts		  "5"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "1010"
+	  Position		  [1255, 175, 1275, 195]
+	  ZOrder		  736
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "1011"
+	  Position		  [1255, 230, 1275, 250]
+	  ZOrder		  737
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator2"
+	  SID			  "1012"
+	  Position		  [1255, 440, 1275, 460]
+	  ZOrder		  738
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator3"
+	  SID			  "1013"
+	  Position		  [1255, 495, 1275, 515]
+	  ZOrder		  739
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator4"
+	  SID			  "1284"
+	  Position		  [780, 455, 800, 475]
+	  ZOrder		  803
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator5"
+	  SID			  "1592"
+	  Position		  [310, 455, 330, 475]
+	  ZOrder		  886
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator6"
+	  SID			  "1593"
+	  Position		  [310, 500, 330, 520]
+	  ZOrder		  887
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "timing"
+	  SID			  "85"
+	  Ports			  [3, 5]
+	  Position		  [555, 256, 745, 494]
+	  ZOrder		  659
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "timing"
+	    Location		    [0, 25, 1920, 1055]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "84"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In_vld"
+	      SID		      "1595"
+	      Position		      [305, 613, 335, 627]
+	      ZOrder		      876
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In_ch"
+	      SID		      "1596"
+	      Position		      [305, 583, 335, 597]
+	      ZOrder		      875
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In_data"
+	      SID		      "1597"
+	      Position		      [305, 543, 335, 557]
+	      ZOrder		      874
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "And2"
+	      SID		      "73"
+	      Ports		      [2, 1]
+	      Position		      [560, 218, 580, 282]
+	      ZOrder		      650
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/And"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "and"
+	      nInputs		      "2"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "[' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ' '; ]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('&');"
+	      style		      "Optimised"
+	      visibilities	      "8+2"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "BitExtract2"
+	      SID		      "810"
+	      Ports		      [1, 1]
+	      Position		      [1280, 483, 1315, 517]
+	      ZOrder		      708
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/BitExtract"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "bitextract"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('..%d', value);"
+	      style		      "Optimised"
+	      visibilities	      "8+1024"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "BitExtract3"
+	      SID		      "811"
+	      Ports		      [1, 1]
+	      Position		      [1280, 548, 1315, 582]
+	      ZOrder		      707
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/BitExtract"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "bitextract"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "16"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('..%d', value);"
+	      style		      "Optimised"
+	      visibilities	      "8+1024"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ChannelOut"
+	      SID		      "1279"
+	      Ports		      [5, 5]
+	      Position		      [1570, 264, 1650, 656]
+	      ZOrder		      802
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/ChannelOut"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "channelout"
+	      nInputs		      "dspba_internal_get_channel_ports(gcb)"
+	      nOutputs		      "dspba_internal_get_channel_ports(gcb)"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "3"
+	      inPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; '"
+	      "H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      outPortNames	      "['v'; 'c'; '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9'; 'A'; 'B'; 'D'; 'E'; 'F'; 'G'; "
+	      "'H'; 'I'; 'J'; 'K'; 'L'; 'M'; 'N'; 'O'; 'P'; 'Q'; 'R'; 'S'; 'T'; 'U'; 'W'; 'X'; 'Y'; 'Z']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('Out%s', AdvDSPBChannelOutDisplay(latency));"
+	      style		      "Optimised"
+	      dataSignals	      "3"
+	      foldingEnabled	      off
+	      channels		      "1"
+	      sampleRate	      "200"
+	      packetBeginPresent      off
+	      packetBeginEnabled      "off"
+	      visibilities	      "dspba_ChannelOutVis(gcb)"
+	      latency		      "0"
+	      latencyCorrection	      "0"
+	      version		      "20141013"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "CmpEQ1"
+	      SID		      "1106"
+	      Ports		      [2, 1]
+	      Position		      [1215, 273, 1255, 322]
+	      ZOrder		      788
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/CmpEQ"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "cmpeq"
+	      nInputs		      "2"
+	      nOutputs		      "1"
+	      omode		      "boolean"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('==');"
+	      style		      "Optimised"
+	      visibilities	      "0"
+	      advOptions	      "[]"
+	      version		      "20130117"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const11"
+	      SID		      "1107"
+	      Ports		      [0, 1]
+	      Position		      [1145, 312, 1175, 338]
+	      ZOrder		      787
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "ufix(log2(data_len))"
+	      scale		      "2^-0"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "4095"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const12"
+	      SID		      "1125"
+	      Ports		      [0, 1]
+	      Position		      [720, 317, 750, 343]
+	      ZOrder		      794
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "ufix(log2(data_len))"
+	      scale		      "2^-0"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const13"
+	      SID		      "1126"
+	      Ports		      [0, 1]
+	      Position		      [720, 357, 750, 383]
+	      ZOrder		      795
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "ufix(log2(data_len))"
+	      scale		      "2^-0"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const14"
+	      SID		      "1127"
+	      Ports		      [0, 1]
+	      Position		      [720, 407, 750, 433]
+	      ZOrder		      796
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "ufix(log2(data_len)+1)"
+	      scale		      "2^-0"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "data_len"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Const15"
+	      SID		      "1280"
+	      Ports		      [0, 1]
+	      Position		      [1500, 365, 1535, 395]
+	      ZOrder		      803
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Const"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "const"
+	      nInputs		      "0"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "ufix(8)"
+	      scale		      "2^-0"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "['+'; '+';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('%s', num2str(value));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      floatPrecision	      "float32_m23"
+	      version		      "20120820"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "GPIn"
+	      SID		      "1598"
+	      Ports		      [1, 1]
+	      Position		      [405, 530, 440, 570]
+	      ZOrder		      879
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/GPIn"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "gpin"
+	      nInputs		      "evalAionMaskParam(gcb,'value',1)"
+	      nOutputs		      "evalAionMaskParam(gcb,'value',1)"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '"
+	      " ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ']'"
+	      outPortNames	      "[' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' "
+	      "' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ']'"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('GPIn');"
+	      style		      "Optimised"
+	      visibilities	      "1024"
+	      latencyCorrection	      "0"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "GPIn1"
+	      SID		      "1601"
+	      Ports		      [1, 1]
+	      Position		      [405, 600, 440, 640]
+	      ZOrder		      880
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/GPIn"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "gpin"
+	      nInputs		      "evalAionMaskParam(gcb,'value',1)"
+	      nOutputs		      "evalAionMaskParam(gcb,'value',1)"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '"
+	      " ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ']'"
+	      outPortNames	      "[' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' "
+	      "' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ']'"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('GPIn');"
+	      style		      "Optimised"
+	      visibilities	      "1024"
+	      latencyCorrection	      "0"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "LoadableCounter"
+	      SID		      "1124"
+	      Ports		      [5, 1]
+	      Position		      [815, 195, 875, 375]
+	      ZOrder		      792
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/LoadableCounter"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "loadablecounter"
+	      nInputs		      "5"
+	      nOutputs		      "1"
+	      omode		      "Specify via dialog"
+	      otype		      "ufix(log2(data_len))"
+	      scale		      "2^-0"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "[0 data_len 1]"
+	      inPortNames	      "['en';'ld';'i ';'s ';'m ']"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('loadable\\ncounter\\n[%d %d %d]', value(1), value(2), value(3));"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Not"
+	      SID		      "74"
+	      Ports		      [1, 1]
+	      Position		      [520, 222, 540, 248]
+	      ZOrder		      649
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/Not"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "not"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "0"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "fprintf('~');"
+	      style		      "Optimised"
+	      visibilities	      "8"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      RealImagToComplex
+	      Name		      "Real-Imag to\nComplex"
+	      SID		      "812"
+	      Ports		      [2, 1]
+	      Position		      [1375, 518, 1405, 547]
+	      ZOrder		      706
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "RegBit"
+	      SID		      "865"
+	      Ports		      [0, 1]
+	      Position		      [270, 214, 395, 256]
+	      ZOrder		      738
+	      LibraryVersion	      "1.84"
+	      SourceBlock	      "DSPBAModelBus/RegBit"
+	      SourceType	      "DSP Builder Advanced Blockset RegBit"
+	      reg_name		      "goertzel_flush"
+	      reg_rwmode	      "Read/Write"
+	      reg_lsb		      "0"
+	      reg_init		      "0"
+	      reg_desc		      "Description of what is stored in this field"
+	      reg_addr		      "4"
+	      reg_desc0		      "0"
+	      reg_desc1		      "0"
+	      SampleTime	      "1"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SRlatch_PS"
+	      SID		      "1645"
+	      Ports		      [2, 1]
+	      Position		      [950, 428, 1010, 492]
+	      ZOrder		      884
+	      LibraryVersion	      "1.54"
+	      SourceBlock	      "DSPBAControl/SRlatch_PS"
+	      SourceType	      "SetResetLatchPrioritySet"
+	      ContentPreviewEnabled   off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay1"
+	      SID		      "1647"
+	      Ports		      [1, 1]
+	      Position		      [540, 607, 565, 633]
+	      ZOrder		      885
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay2"
+	      SID		      "76"
+	      Ports		      [1, 1]
+	      Position		      [480, 222, 505, 248]
+	      ZOrder		      648
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "1"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SampleDelay4"
+	      SID		      "884"
+	      Ports		      [1, 1]
+	      Position		      [1285, 287, 1310, 313]
+	      ZOrder		      740
+	      ShowName		      off
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SampleDelay"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "sampdelay"
+	      nInputs		      "1"
+	      nOutputs		      "1"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Unbiased"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "6"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim.jpg"
+	      text		      "dpoly(1, eye(1,value+1), 'z')"
+	      style		      "Optimised"
+	      visibilities	      "8 + 1024 + 2^17 + 2^18"
+	      flexible		      off
+	      slackgroup	      "0"
+	      augmented		      "0"
+	      version		      "20090407"
+	      advOptions	      "[]"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Scope"
+	      SID		      "1285"
+	      Ports		      [7]
+	      Position		      [1830, 815, 1915, 985]
+	      ZOrder		      806
+	      ScopeSpecificationString "C++SS(StrPVP('Location','[10, 60, 1918, 1050]'),StrPVP('Open','off'),StrPVP('ZoomMode"
+	      "','xonly'),MxPVP('AxesTitles',24,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''"
+	      "%<SignalLabel>'',''axes4'',''%<SignalLabel>'',''axes5'',''%<SignalLabel>'',''axes6'',''%<SignalLabel>'',''axes7"
+	      "'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',28,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 "
+	      "0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''"
+	      "-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'"
+	      "),StrPVP('ShowLegends','off'),StrPVP('YMin','-0.5~0.5~-0.00476074~-0~-1~-5~-5'),StrPVP('YMax','2~3~2~2~1~5~5'),"
+	      "StrPVP('SaveToWorkspace','on'),StrPVP('SaveName','ScopeData9'),StrPVP('DataFormat','StructureWithTime'),StrPVP("
+	      "'LimitDataPoints','off'),StrPVP('ScrollMode','off'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','of"
+	      "f'))"
+	      NumInputPorts	      "7"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SynthesisInfo"
+	      SID		      "1021"
+	      Ports		      []
+	      Position		      [760, 20, 905, 64]
+	      ZOrder		      784
+	      LibraryVersion	      "1.432"
+	      SourceBlock	      "DSPBAPrim/SynthesisInfo"
+	      SourceType	      "DSP Builder Advanced Blockset primitive"
+	      primtype		      "synthinfo"
+	      nInputs		      "0"
+	      nOutputs		      "0"
+	      omode		      "Inherit via internal rule"
+	      otype		      "sfix(16)"
+	      scale		      "2^-15"
+	      rndmethod		      "Truncate"
+	      factor		      "1"
+	      satmethod		      "Symmetric"
+	      shift_vec		      "[0 1 2 -1]"
+	      value		      "99"
+	      inPortNames	      "[' '; ' ';]"
+	      outPortNames	      "[' ']"
+	      dspbaimage	      "dspba_prim_ctrl.jpg"
+	      text		      "fprintf('Style=%s', style);"
+	      style		      "Scheduled"
+	      visibilities	      "2^15+2^17+2^18+2^19"
+	      constraintInUse	      off
+	      constraintRelation      ">"
+	      constraintLimit	      "2"
+	      bitAccurate	      off
+	      version		      "20150220"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator3"
+	      SID		      "1599"
+	      Position		      [385, 580, 405, 600]
+	      ZOrder		      877
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "b_coeff_reg"
+	      SID		      "1500"
+	      Ports		      [0, 1]
+	      Position		      [1180, 595, 1315, 645]
+	      ZOrder		      862
+	      LibraryVersion	      "1.84"
+	      SourceBlock	      "DSPBAModelBus/RegField"
+	      SourceType	      "DSP Builder Advanced Blockset RegField"
+	      reg_name		      "b_coeff_reg"
+	      reg_rwmode	      "Read/Write"
+	      reg_msb		      "15"
+	      reg_lsb		      "0"
+	      reg_mode		      "Specify via dialog"
+	      reg_type		      "sfix(16)"
+	      reg_scale		      "2^-13"
+	      reg_init		      "b_coeff_val"
+	      reg_desc		      "Description of what is stored in this field"
+	      reg_modal		      off
+	      reg_desc0		      "0"
+	      reg_desc1		      "0"
+	      reg_desc2		      "0"
+	      reg_desc3		      "0"
+	      reg_desc4		      "0"
+	      reg_desc5		      "0"
+	      reg_desc6		      "0"
+	      reg_desc7		      "0"
+	      reg_addr		      "8"
+	      SampleTime	      "1"
+	      version		      "20090407"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "latch_1L"
+	      SID		      "1602"
+	      Ports		      [2, 1]
+	      Position		      [1130, 505, 1185, 565]
+	      ZOrder		      881
+	      LibraryVersion	      "1.54"
+	      SourceBlock	      "DSPBAControl/latch_1L"
+	      SourceType	      ""
+	      ContentPreviewEnabled   off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "data_in"
+	      SID		      "95"
+	      Position		      [1800, 533, 1830, 547]
+	      ZOrder		      798
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "coeff"
+	      SID		      "112"
+	      Position		      [1800, 613, 1830, 627]
+	      ZOrder		      799
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "flush"
+	      SID		      "87"
+	      Position		      [1800, 453, 1830, 467]
+	      ZOrder		      797
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "data_latch"
+	      SID		      "733"
+	      Position		      [1800, 293, 1830, 307]
+	      ZOrder		      801
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "data_chan"
+	      SID		      "1282"
+	      Position		      [1800, 373, 1830, 387]
+	      ZOrder		      805
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Not"
+	      SrcPort		      1
+	      DstBlock		      "And2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "SampleDelay2"
+	      SrcPort		      1
+	      DstBlock		      "Not"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      41
+	      SrcBlock		      "BitExtract2"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		ZOrder			978
+		Points			[0, 325]
+		DstBlock		"Scope"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			977
+		Points			[15, 0; 0, 25]
+		DstBlock		"Real-Imag to\nComplex"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      42
+	      SrcBlock		      "BitExtract3"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		ZOrder			981
+		Points			[0, -25]
+		DstBlock		"Real-Imag to\nComplex"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			980
+		Points			[0, 285]
+		DstBlock		"Scope"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      64
+	      SrcBlock		      "And2"
+	      SrcPort		      1
+	      Points		      [63, 0]
+	      Branch {
+		ZOrder			890
+		Points			[0, 195]
+		DstBlock		"SRlatch_PS"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			889
+		Points			[24, 0]
+		Branch {
+		  ZOrder		  909
+		  Points		  [0, 725]
+		  DstBlock		  "Scope"
+		  DstPort		  7
+		}
+		Branch {
+		  ZOrder		  908
+		  DstBlock		  "LoadableCounter"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Line {
+	      ZOrder		      360
+	      SrcBlock		      "RegBit"
+	      SrcPort		      1
+	      Points		      [57, 0]
+	      Branch {
+		ZOrder			51
+		DstBlock		"SampleDelay2"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			52
+		Points			[0, 30]
+		DstBlock		"And2"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      366
+	      SrcBlock		      "SampleDelay4"
+	      SrcPort		      1
+	      DstBlock		      "ChannelOut"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      206
+	      SrcBlock		      "Const11"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -15]
+	      DstBlock		      "CmpEQ1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      894
+	      SrcBlock		      "LoadableCounter"
+	      SrcPort		      1
+	      Points		      [176, 0]
+	      Branch {
+		ZOrder			903
+		Points			[0, 665]
+		DstBlock		"Scope"
+		DstPort			6
+	      }
+	      Branch {
+		ZOrder			902
+		DstBlock		"CmpEQ1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      208
+	      SrcBlock		      "CmpEQ1"
+	      SrcPort		      1
+	      DstBlock		      "SampleDelay4"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      290
+	      SrcBlock		      "Const12"
+	      SrcPort		      1
+	      Points		      [27, 0; 0, -45]
+	      DstBlock		      "LoadableCounter"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      291
+	      SrcBlock		      "Const13"
+	      SrcPort		      1
+	      Points		      [36, 0; 0, -50]
+	      DstBlock		      "LoadableCounter"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      292
+	      SrcBlock		      "Const14"
+	      SrcPort		      1
+	      Points		      [44, 0; 0, -65]
+	      DstBlock		      "LoadableCounter"
+	      DstPort		      5
+	    }
+	    Line {
+	      ZOrder		      371
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      3
+	      DstBlock		      "flush"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      372
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      1
+	      DstBlock		      "data_latch"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      373
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      4
+	      DstBlock		      "data_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      377
+	      SrcBlock		      "Const15"
+	      SrcPort		      1
+	      DstBlock		      "ChannelOut"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      379
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      2
+	      DstBlock		      "data_chan"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      374
+	      SrcBlock		      "ChannelOut"
+	      SrcPort		      5
+	      DstBlock		      "coeff"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      457
+	      SrcBlock		      "Real-Imag to\nComplex"
+	      SrcPort		      1
+	      Points		      [124, 0; 0, 5]
+	      DstBlock		      "ChannelOut"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      859
+	      SrcBlock		      "b_coeff_reg"
+	      SrcPort		      1
+	      Points		      [183, 0]
+	      Branch {
+		ZOrder			975
+		Points			[0, 255]
+		DstBlock		"Scope"
+		DstPort			3
+	      }
+	      Branch {
+		ZOrder			884
+		DstBlock		"ChannelOut"
+		DstPort			5
+	      }
+	    }
+	    Line {
+	      ZOrder		      861
+	      SrcBlock		      "In_data"
+	      SrcPort		      1
+	      DstBlock		      "GPIn"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      862
+	      SrcBlock		      "In_ch"
+	      SrcPort		      1
+	      DstBlock		      "Terminator3"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      863
+	      SrcBlock		      "In_vld"
+	      SrcPort		      1
+	      DstBlock		      "GPIn1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      869
+	      SrcBlock		      "GPIn1"
+	      SrcPort		      1
+	      Points		      [59, 0]
+	      Branch {
+		ZOrder			906
+		Points			[0, -100]
+		Branch {
+		  ZOrder		  962
+		  Points		  [0, -103; 119, 0; 0, -202]
+		  DstBlock		  "LoadableCounter"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  961
+		  DstBlock		  "latch_1L"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		ZOrder			905
+		DstBlock		"SampleDelay1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      870
+	      SrcBlock		      "GPIn"
+	      SrcPort		      1
+	      DstBlock		      "latch_1L"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      871
+	      SrcBlock		      "latch_1L"
+	      SrcPort		      1
+	      Points		      [43, 0]
+	      Branch {
+		ZOrder			875
+		Points			[0, 30]
+		DstBlock		"BitExtract3"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			872
+		Points			[0, -35]
+		DstBlock		"BitExtract2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      893
+	      SrcBlock		      "SRlatch_PS"
+	      SrcPort		      1
+	      Points		      [453, 0]
+	      Branch {
+		ZOrder			896
+		Points			[0, 465]
+		DstBlock		"Scope"
+		DstPort			5
+	      }
+	      Branch {
+		ZOrder			895
+		DstBlock		"ChannelOut"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      ZOrder		      904
+	      SrcBlock		      "SampleDelay1"
+	      SrcPort		      1
+	      Points		      [27, 0]
+	      Branch {
+		ZOrder			898
+		Points			[0, 280]
+		DstBlock		"Scope"
+		DstPort			4
+	      }
+	      Branch {
+		ZOrder			897
+		Points			[223, 0; 0, -145]
+		DstBlock		"SRlatch_PS"
+		DstPort			2
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "y0_imag_regout"
+	  SID			  "1692"
+	  Ports			  [2]
+	  Position		  [1570, 375, 1695, 415]
+	  ZOrder		  890
+	  LibraryVersion	  "1.84"
+	  SourceBlock		  "DSPBAModelBus/RegOut"
+	  SourceType		  "DSP Builder Advanced Blockset RegOut"
+	  reg_name		  "y0_imag_val"
+	  reg_rwmode		  "Read"
+	  reg_msb		  "31"
+	  reg_lsb		  "0"
+	  reg_desc		  "Description of what is stored in this register"
+	  reg_addr		  "16"
+	  SampleTime		  "1"
+	  version		  "20090407"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "y0_real_regout"
+	  SID			  "1693"
+	  Ports			  [2]
+	  Position		  [1570, 285, 1695, 325]
+	  ZOrder		  889
+	  LibraryVersion	  "1.84"
+	  SourceBlock		  "DSPBAModelBus/RegOut"
+	  SourceType		  "DSP Builder Advanced Blockset RegOut"
+	  reg_name		  "y0_real_val"
+	  reg_rwmode		  "Read"
+	  reg_msb		  "31"
+	  reg_lsb		  "0"
+	  reg_desc		  "Description of what is stored in this register"
+	  reg_addr		  "12"
+	  SampleTime		  "1"
+	  version		  "20090407"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "y1_imag_regout"
+	  SID			  "1694"
+	  Ports			  [2]
+	  Position		  [1570, 605, 1695, 645]
+	  ZOrder		  892
+	  LibraryVersion	  "1.84"
+	  SourceBlock		  "DSPBAModelBus/RegOut"
+	  SourceType		  "DSP Builder Advanced Blockset RegOut"
+	  reg_name		  "y1_imag_val"
+	  reg_rwmode		  "Read"
+	  reg_msb		  "31"
+	  reg_lsb		  "0"
+	  reg_desc		  "Description of what is stored in this register"
+	  reg_addr		  "24"
+	  SampleTime		  "1"
+	  version		  "20090407"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "y1_real_regout"
+	  SID			  "1695"
+	  Ports			  [2]
+	  Position		  [1570, 495, 1695, 535]
+	  ZOrder		  891
+	  LibraryVersion	  "1.84"
+	  SourceBlock		  "DSPBAModelBus/RegOut"
+	  SourceType		  "DSP Builder Advanced Blockset RegOut"
+	  reg_name		  "y1_real_val"
+	  reg_rwmode		  "Read"
+	  reg_msb		  "31"
+	  reg_lsb		  "0"
+	  reg_desc		  "Description of what is stored in this register"
+	  reg_addr		  "20"
+	  SampleTime		  "1"
+	  version		  "20090407"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_rdy"
+	  SID			  "1594"
+	  Position		  [340, 278, 360, 292]
+	  ZOrder		  884
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  188
+	  SrcBlock		  "timing"
+	  SrcPort		  2
+	  Points		  [191, 0]
+	  Branch {
+	    ZOrder		    458
+	    Points		    [0, -20]
+	    DstBlock		    "Real_filter"
+	    DstPort		    4
+	  }
+	  Branch {
+	    ZOrder		    322
+	    Points		    [0, 245]
+	    DstBlock		    "Imag_filter"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  ZOrder		  25
+	  SrcBlock		  "Complex to\nReal-Imag"
+	  SrcPort		  1
+	  DstBlock		  "Real_filter"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  190
+	  SrcBlock		  "timing"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -10]
+	  DstBlock		  "Complex to\nReal-Imag"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  392
+	  SrcBlock		  "Real_filter"
+	  SrcPort		  3
+	  Points		  [112, 0]
+	  Branch {
+	    ZOrder		    470
+	    DstBlock		    "y0_real_regout"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    466
+	    Points		    [0, -190]
+	    DstBlock		    "Scope1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  396
+	  SrcBlock		  "Imag_filter"
+	  SrcPort		  3
+	  Points		  [128, 0]
+	  Branch {
+	    ZOrder		    472
+	    Points		    [0, -425]
+	    DstBlock		    "Scope1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    471
+	    Points		    [149, 0; 0, -175]
+	    DstBlock		    "y0_imag_regout"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  394
+	  SrcBlock		  "Real_filter"
+	  SrcPort		  4
+	  Points		  [166, 0]
+	  Branch {
+	    ZOrder		    469
+	    Points		    [0, 155]
+	    DstBlock		    "y1_real_regout"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    468
+	    Points		    [0, -230]
+	    DstBlock		    "Scope1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  320
+	  SrcBlock		  "Complex to\nReal-Imag"
+	  SrcPort		  2
+	  Points		  [98, 0; 0, 250]
+	  DstBlock		  "Imag_filter"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  43
+	  SrcBlock		  "Const"
+	  SrcPort		  1
+	  DstBlock		  "Real_filter"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  318
+	  SrcBlock		  "Const1"
+	  SrcPort		  1
+	  DstBlock		  "Imag_filter"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  45
+	  SrcBlock		  "Const2"
+	  SrcPort		  1
+	  DstBlock		  "Real_filter"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  319
+	  SrcBlock		  "Const3"
+	  SrcPort		  1
+	  DstBlock		  "Imag_filter"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  47
+	  SrcBlock		  "Real_filter"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  48
+	  SrcBlock		  "Real_filter"
+	  SrcPort		  2
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  324
+	  SrcBlock		  "Imag_filter"
+	  SrcPort		  1
+	  DstBlock		  "Terminator2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  326
+	  SrcBlock		  "Imag_filter"
+	  SrcPort		  2
+	  DstBlock		  "Terminator3"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  186
+	  SrcBlock		  "timing"
+	  SrcPort		  3
+	  Points		  [164, 0]
+	  Branch {
+	    ZOrder		    459
+	    Points		    [0, -20]
+	    DstBlock		    "Real_filter"
+	    DstPort		    5
+	  }
+	  Branch {
+	    ZOrder		    325
+	    Points		    [0, 245]
+	    DstBlock		    "Imag_filter"
+	    DstPort		    5
+	  }
+	}
+	Line {
+	  ZOrder		  194
+	  SrcBlock		  "timing"
+	  SrcPort		  5
+	  DstBlock		  "Terminator4"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  348
+	  SrcBlock		  "d"
+	  SrcPort		  1
+	  DstBlock		  "AStInput"
+	  DstPort		  4
+	}
+	Line {
+	  ZOrder		  349
+	  SrcBlock		  "v"
+	  SrcPort		  1
+	  DstBlock		  "AStInput"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  350
+	  SrcBlock		  "c"
+	  SrcPort		  1
+	  DstBlock		  "AStInput"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  362
+	  SrcBlock		  "AStInput"
+	  SrcPort		  2
+	  Points		  [70, 0]
+	  Branch {
+	    ZOrder		    375
+	    Points		    [0, 245]
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    374
+	    Points		    [48, 0; 0, -35]
+	    DstBlock		    "timing"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  360
+	  SrcBlock		  "AStInput"
+	  SrcPort		  3
+	  Points		  [88, 0]
+	  Branch {
+	    ZOrder		    377
+	    Points		    [0, 255]
+	    DstBlock		    "Scope"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    376
+	    DstBlock		    "timing"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  361
+	  SrcBlock		  "AStInput"
+	  SrcPort		  4
+	  Points		  [114, 0]
+	  Branch {
+	    ZOrder		    379
+	    Points		    [0, 265]
+	    DstBlock		    "Scope"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    378
+	    Points		    [12, 0; 0, 35]
+	    DstBlock		    "timing"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  ZOrder		  354
+	  SrcBlock		  "AStInput"
+	  SrcPort		  6
+	  DstBlock		  "Terminator6"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  355
+	  SrcBlock		  "AStInput"
+	  SrcPort		  5
+	  DstBlock		  "Terminator5"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  356
+	  SrcBlock		  "AStInput"
+	  SrcPort		  1
+	  DstBlock		  "out_rdy"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  357
+	  SrcBlock		  "eop"
+	  SrcPort		  1
+	  DstBlock		  "AStInput"
+	  DstPort		  6
+	}
+	Line {
+	  ZOrder		  358
+	  SrcBlock		  "sop"
+	  SrcPort		  1
+	  DstBlock		  "AStInput"
+	  DstPort		  5
+	}
+	Line {
+	  ZOrder		  359
+	  SrcBlock		  "Const5"
+	  SrcPort		  1
+	  DstBlock		  "AStInput"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  432
+	  SrcBlock		  "Not"
+	  SrcPort		  1
+	  DstBlock		  "And2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  433
+	  SrcBlock		  "SampleDelay2"
+	  SrcPort		  1
+	  DstBlock		  "Not"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  439
+	  SrcBlock		  "timing"
+	  SrcPort		  4
+	  Points		  [107, 0; 0, 280; 280, 0]
+	  Branch {
+	    ZOrder		    441
+	    Points		    [0, 30]
+	    DstBlock		    "And2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    440
+	    DstBlock		    "SampleDelay2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  442
+	  SrcBlock		  "And2"
+	  SrcPort		  1
+	  DstBlock		  "SampleDelay1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  455
+	  SrcBlock		  "Imag_filter"
+	  SrcPort		  4
+	  Points		  [179, 0]
+	  Branch {
+	    ZOrder		    474
+	    Points		    [0, -465]
+	    DstBlock		    "Scope1"
+	    DstPort		    4
+	  }
+	  Branch {
+	    ZOrder		    473
+	    DstBlock		    "y1_imag_regout"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  477
+	  SrcBlock		  "SampleDelay1"
+	  SrcPort		  1
+	  Points		  [61, 0; 0, -80]
+	  Branch {
+	    ZOrder		    457
+	    DstBlock		    "y1_imag_regout"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    456
+	    Points		    [0, -110]
+	    Branch {
+	      ZOrder		      446
+	      DstBlock		      "y1_real_regout"
+	      DstPort		      2
+	    }
+	    Branch {
+	      ZOrder		      445
+	      Points		      [0, -120]
+	      Branch {
+		ZOrder			444
+		DstBlock		"y0_imag_regout"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			443
+		Points			[0, -90; 1, 0]
+		Branch {
+		  ZOrder		  476
+		  Points		  [0, -150]
+		  DstBlock		  "Scope1"
+		  DstPort		  5
+		}
+		Branch {
+		  ZOrder		  475
+		  DstBlock		  "y0_real_regout"
+		  DstPort		  2
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "test_stimulus_generation"
+      SID		      "1603"
+      Ports		      [0, 5]
+      Position		      [110, 222, 365, 568]
+      ZOrder		      806
+      BackgroundColor	      "[1.000000, 0.717647, 0.529412]"
+      RequestExecContextInheritance off
+      Variant		      off
+      System {
+	Name			"test_stimulus_generation"
+	Location		[0, 25, 1920, 1055]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"68"
+	Block {
+	  BlockType		  Reference
+	  Name			  "BitCombine"
+	  SID			  "1604"
+	  Ports			  [2, 1]
+	  Position		  [2900, 789, 2930, 836]
+	  ZOrder		  587
+	  ShowName		  off
+	  LibraryVersion	  "1.432"
+	  SourceBlock		  "DSPBAPrim/BitCombine"
+	  SourceType		  "DSP Builder Advanced Blockset primitive"
+	  primtype		  "bitcombine"
+	  nInputs		  "2"
+	  nOutputs		  "1"
+	  omode			  "Specify via dialog"
+	  otype			  "sfix(32)"
+	  scale			  "2^-0"
+	  rndmethod		  "Unbiased"
+	  factor		  "1"
+	  satmethod		  "Symmetric"
+	  shift_vec		  "[0 1 2 -1]"
+	  value			  "0"
+	  inPortNames		  "['l'; 'h';]"
+	  outPortNames		  "[' ']"
+	  dspbaimage		  "dspba_prim.jpg"
+	  text			  "fprintf('[h,l]');"
+	  style			  "Optimised"
+	  visibilities		  "8"
+	  version		  "20090407"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Channelizer"
+	  SID			  "1605"
+	  Ports			  [0, 3]
+	  Position		  [1080, 736, 1180, 894]
+	  ZOrder		  217
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "1.87"
+	  SourceBlock		  "DSPBAUtilities/Channelizer"
+	  SourceType		  "DSPBA Utilities Channelizer"
+	  ContentPreviewEnabled	  off
+	  data_input		  "goertzel_spectrum_param.inputdata1"
+	  folding		  "goertzel_spectrum_param.Period"
+	  samples_valid		  "1"
+	  samples_idle		  "0"
+	  sample_time		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Channelizer1"
+	  SID			  "1606"
+	  Ports			  [0, 3]
+	  Position		  [1070, 1351, 1170, 1509]
+	  ZOrder		  276
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "1.87"
+	  SourceBlock		  "DSPBAUtilities/Channelizer"
+	  SourceType		  "DSPBA Utilities Channelizer"
+	  ContentPreviewEnabled	  off
+	  data_input		  "goertzel_spectrum_param.inputdata2"
+	  folding		  "goertzel_spectrum_param.Period"
+	  samples_valid		  "1"
+	  samples_idle		  "0"
+	  sample_time		  "1"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  SID			  "1607"
+	  Position		  [1375, 748, 1450, 782]
+	  ZOrder		  218
+	  OutDataTypeStr	  "fixdt(1,16,15)"
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "1608"
+	  Position		  [1365, 1363, 1440, 1397]
+	  ZOrder		  277
+	  OutDataTypeStr	  "fixdt(1,16,15)"
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay"
+	  SID			  "1609"
+	  Ports			  [1, 1]
+	  Position		  [2215, 433, 2250, 467]
+	  ZOrder		  289
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay1"
+	  SID			  "1610"
+	  Ports			  [1, 1]
+	  Position		  [2215, 543, 2250, 577]
+	  ZOrder		  290
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay2"
+	  SID			  "1611"
+	  Ports			  [1, 1]
+	  Position		  [2215, 638, 2250, 672]
+	  ZOrder		  291
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay3"
+	  SID			  "1612"
+	  Ports			  [1, 1]
+	  Position		  [2215, 708, 2250, 742]
+	  ZOrder		  292
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay4"
+	  SID			  "1613"
+	  Ports			  [1, 1]
+	  Position		  [2215, 773, 2250, 807]
+	  ZOrder		  293
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay5"
+	  SID			  "1614"
+	  Ports			  [1, 1]
+	  Position		  [2215, 1053, 2250, 1087]
+	  ZOrder		  294
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay6"
+	  SID			  "1615"
+	  Ports			  [1, 1]
+	  Position		  [2215, 1163, 2250, 1197]
+	  ZOrder		  295
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay7"
+	  SID			  "1616"
+	  Ports			  [1, 1]
+	  Position		  [2215, 1258, 2250, 1292]
+	  ZOrder		  296
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay8"
+	  SID			  "1617"
+	  Ports			  [1, 1]
+	  Position		  [2215, 1328, 2250, 1362]
+	  ZOrder		  297
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay9"
+	  SID			  "1618"
+	  Ports			  [1, 1]
+	  Position		  [2215, 1393, 2250, 1427]
+	  ZOrder		  298
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InitialCondition	  "0"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator"
+	  SID			  "1619"
+	  Ports			  [2, 1]
+	  Position		  [1500, 889, 1530, 936]
+	  ZOrder		  221
+	  ShowName		  off
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator1"
+	  SID			  "1620"
+	  Ports			  [1, 1]
+	  Position		  [1335, 916, 1365, 934]
+	  ZOrder		  223
+	  ShowName		  off
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator2"
+	  SID			  "1621"
+	  Ports			  [2, 1]
+	  Position		  [1490, 1504, 1520, 1551]
+	  ZOrder		  278
+	  ShowName		  off
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator3"
+	  SID			  "1622"
+	  Ports			  [1, 1]
+	  Position		  [1325, 1531, 1355, 1549]
+	  ZOrder		  280
+	  ShowName		  off
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "1623"
+	  Position		  [1350, 860, 1405, 890]
+	  ZOrder		  225
+	  ShowName		  off
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "1624"
+	  Position		  [1340, 1475, 1395, 1505]
+	  ZOrder		  282
+	  ShowName		  off
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "1625"
+	  Position		  [2395, 1170, 2415, 1190]
+	  ZOrder		  305
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "1626"
+	  Position		  [2395, 1265, 2415, 1285]
+	  ZOrder		  306
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator2"
+	  SID			  "1627"
+	  Position		  [2395, 1335, 2415, 1355]
+	  ZOrder		  307
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator3"
+	  SID			  "1628"
+	  Position		  [2395, 1400, 2415, 1420]
+	  ZOrder		  308
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay"
+	  SID			  "1629"
+	  Position		  [1410, 913, 1450, 937]
+	  ZOrder		  222
+	  InputProcessing	  "Elements as channels (sample based)"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay1"
+	  SID			  "1630"
+	  Position		  [1400, 1528, 1440, 1552]
+	  ZOrder		  279
+	  InputProcessing	  "Elements as channels (sample based)"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Variable Integer Delay"
+	  SID			  "1631"
+	  Ports			  [1, 1]
+	  Position		  [1580, 947, 1640, 983]
+	  ZOrder		  224
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InputProcessing	  "Inherited"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Variable Integer Delay1"
+	  SID			  "1632"
+	  Ports			  [1, 1]
+	  Position		  [1570, 1562, 1630, 1598]
+	  ZOrder		  281
+	  InputPortMap		  "u0"
+	  DelayLength		  "4"
+	  InputProcessing	  "Inherited"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "zero_channel"
+	  SID			  "1633"
+	  Position		  [1200, 875, 1220, 895]
+	  ZOrder		  226
+	  Value			  "0"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "zero_channel1"
+	  SID			  "1634"
+	  Position		  [1190, 1490, 1210, 1510]
+	  ZOrder		  283
+	  Value			  "0"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "test_stim_v"
+	  SID			  "1635"
+	  Position		  [2440, 553, 2470, 567]
+	  ZOrder		  227
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "test_stim_c"
+	  SID			  "1636"
+	  Position		  [2440, 648, 2470, 662]
+	  ZOrder		  228
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "test_stim_q"
+	  SID			  "1637"
+	  Position		  [3065, 808, 3095, 822]
+	  ZOrder		  229
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "test_stim_sop"
+	  SID			  "1638"
+	  Position		  [2440, 718, 2470, 732]
+	  ZOrder		  230
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "test_stim_eop"
+	  SID			  "1639"
+	  Position		  [2440, 783, 2470, 797]
+	  ZOrder		  231
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Channelizer"
+	  SrcPort		  3
+	  DstBlock		  "Switch1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  DstBlock		  "Unit Delay"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "Channelizer"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "Logical\nOperator"
+	  SrcPort		  1
+	  Points		  [13, 0]
+	  Branch {
+	    ZOrder		    5
+	    Points		    [0, 50]
+	    DstBlock		    "Variable Integer Delay"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    6
+	    Points		    [0, -190]
+	    DstBlock		    "Delay3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  7
+	  SrcBlock		  "zero_channel"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  8
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "Channelizer"
+	  SrcPort		  2
+	  Points		  [113, 0]
+	  Branch {
+	    ZOrder		    10
+	    Points		    [0, 60]
+	    Branch {
+	      ZOrder		      11
+	      Points		      [0, 25]
+	      Branch {
+		ZOrder			12
+		DstBlock		"Logical\nOperator"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			13
+		Points			[0, 25]
+		DstBlock		"Logical\nOperator1"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      ZOrder		      14
+	      DstBlock		      "Switch1"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    ZOrder		    15
+	    Points		    [0, -255]
+	    DstBlock		    "Delay1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  16
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  Points		  [82, 0; 0, -220]
+	  DstBlock		  "Delay2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  17
+	  SrcBlock		  "Variable Integer Delay"
+	  SrcPort		  1
+	  Points		  [444, 0; 0, -175]
+	  DstBlock		  "Delay4"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  18
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  Points		  [16, 0; 0, -315]
+	  DstBlock		  "Delay"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  19
+	  SrcBlock		  "Channelizer1"
+	  SrcPort		  3
+	  DstBlock		  "Switch2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  20
+	  SrcBlock		  "Logical\nOperator3"
+	  SrcPort		  1
+	  DstBlock		  "Unit Delay1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  21
+	  SrcBlock		  "Channelizer1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  22
+	  SrcBlock		  "Logical\nOperator2"
+	  SrcPort		  1
+	  Points		  [13, 0]
+	  Branch {
+	    ZOrder		    23
+	    Points		    [0, 50]
+	    DstBlock		    "Variable Integer Delay1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    24
+	    Points		    [0, -185]
+	    DstBlock		    "Delay8"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  25
+	  SrcBlock		  "zero_channel1"
+	  SrcPort		  1
+	  DstBlock		  "Switch2"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  26
+	  SrcBlock		  "Unit Delay1"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  27
+	  SrcBlock		  "Channelizer1"
+	  SrcPort		  2
+	  Points		  [113, 0]
+	  Branch {
+	    ZOrder		    28
+	    Points		    [0, 60]
+	    Branch {
+	      ZOrder		      29
+	      Points		      [0, 25]
+	      Branch {
+		ZOrder			30
+		DstBlock		"Logical\nOperator2"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			31
+		Points			[0, 25]
+		DstBlock		"Logical\nOperator3"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      ZOrder		      32
+	      DstBlock		      "Switch2"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    ZOrder		    33
+	    Points		    [0, -250]
+	    DstBlock		    "Delay6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  34
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  Points		  [82, 0; 0, -215]
+	  DstBlock		  "Delay7"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  35
+	  SrcBlock		  "Variable Integer Delay1"
+	  SrcPort		  1
+	  Points		  [444, 0; 0, -170]
+	  DstBlock		  "Delay9"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  36
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  Points		  [16, 0; 0, -310]
+	  DstBlock		  "Delay5"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  37
+	  SrcBlock		  "BitCombine"
+	  SrcPort		  1
+	  DstBlock		  "test_stim_q"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  38
+	  SrcBlock		  "Delay1"
+	  SrcPort		  1
+	  DstBlock		  "test_stim_v"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  39
+	  SrcBlock		  "Delay2"
+	  SrcPort		  1
+	  DstBlock		  "test_stim_c"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  40
+	  SrcBlock		  "Delay3"
+	  SrcPort		  1
+	  DstBlock		  "test_stim_sop"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  41
+	  SrcBlock		  "Delay4"
+	  SrcPort		  1
+	  DstBlock		  "test_stim_eop"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  42
+	  SrcBlock		  "Delay6"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  43
+	  SrcBlock		  "Delay7"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  44
+	  SrcBlock		  "Delay8"
+	  SrcPort		  1
+	  DstBlock		  "Terminator2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  45
+	  SrcBlock		  "Delay9"
+	  SrcPort		  1
+	  DstBlock		  "Terminator3"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  46
+	  SrcBlock		  "Delay5"
+	  SrcPort		  1
+	  Points		  [316, 0; 0, -245]
+	  DstBlock		  "BitCombine"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  47
+	  SrcBlock		  "Delay"
+	  SrcPort		  1
+	  Points		  [317, 0; 0, 350]
+	  DstBlock		  "BitCombine"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "1641"
+	  Name			  "IQ Stream"
+	  Position		  [1486, 1019, 1533, 1033]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  ZOrder		  -1
+	}
+	Annotation {
+	  SID			  "1640"
+	  Name			  "IQ Stream"
+	  Position		  [1476, 1634, 1523, 1648]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  ZOrder		  -2
+	}
+      }
+    }
+    Line {
+      ZOrder		      1
+      SrcBlock		      "BusStimulus"
+      SrcPort		      2
+      Points		      [16, 0]
+      Branch {
+	ZOrder			2
+	Points			[0, 95]
+	DstBlock		"Delay"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			3
+	DstBlock		"Scope"
+	DstPort			2
+      }
+    }
+    Line {
+      ZOrder		      4
+      SrcBlock		      "BusStimulus"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	ZOrder			5
+	Points			[0, 160]
+	DstBlock		"Delay1"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			6
+	DstBlock		"Scope"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      7
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      2
+      DstBlock		      "BusStimulus"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      8
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      3
+      DstBlock		      "BusStimulus"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      9
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      4
+      DstBlock		      "BusStimulus"
+      DstPort		      3
+    }
+    Line {
+      ZOrder		      10
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      5
+      DstBlock		      "BusStimulus"
+      DstPort		      4
+    }
+    Line {
+      ZOrder		      11
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      1
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      12
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      6
+      DstBlock		      "Terminator1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      13
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      7
+      DstBlock		      "Terminator2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      14
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      8
+      DstBlock		      "Terminator3"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      15
+      SrcBlock		      "BusStimulusFileReader"
+      SrcPort		      9
+      DstBlock		      "Terminator4"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      16
+      SrcBlock		      "Delay"
+      SrcPort		      1
+      Points		      [-371, 0; 0, -55]
+      DstBlock		      "BusStimulusFileReader"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      17
+      SrcBlock		      "Delay1"
+      SrcPort		      1
+      Points		      [-325, 0; 0, -160]
+      DstBlock		      "BusStimulusFileReader"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      27
+      SrcBlock		      "test_stimulus_generation"
+      SrcPort		      1
+      DstBlock		      "goertzel_spectrum"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      25
+      SrcBlock		      "test_stimulus_generation"
+      SrcPort		      2
+      DstBlock		      "goertzel_spectrum"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      23
+      SrcBlock		      "test_stimulus_generation"
+      SrcPort		      3
+      DstBlock		      "goertzel_spectrum"
+      DstPort		      3
+    }
+    Line {
+      ZOrder		      26
+      SrcBlock		      "test_stimulus_generation"
+      SrcPort		      4
+      DstBlock		      "goertzel_spectrum"
+      DstPort		      4
+    }
+    Line {
+      ZOrder		      24
+      SrcBlock		      "test_stimulus_generation"
+      SrcPort		      5
+      DstBlock		      "goertzel_spectrum"
+      DstPort		      5
+    }
+    Line {
+      ZOrder		      29
+      SrcBlock		      "goertzel_spectrum"
+      SrcPort		      1
+      DstBlock		      "Terminator5"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "1701"
+      Name		      " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n %  \n % Copyright (c) 2017, BigCat Wire"
+      "less Pvt Ltd\n % All rights reserved.\n % \n % Redistribution and use in source and binary forms, with or withou"
+      "t\n % modification, are permitted provided that the following conditions are met:\n % \n %     * Redistributions"
+      " of source code must retain the above copyright notice,\n %       this list of conditions and the following disc"
+      "laimer.\n %\n %     * Redistributions in binary form must reproduce the above copyright\n %       notice, this l"
+      "ist of conditions and the following disclaimer in the\n %       documentation and/or other materials provided wi"
+      "th the distribution.\n %\n %     * Neither the name of the copyright holder nor the names of its contributors\n "
+      "%       may be used to endorse or promote products derived from this software\n %       without specific prior w"
+      "ritten permission.\n % \n % \n % \n % THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS I"
+      "S\"\n % AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n % IMPLIED WARRANTIES OF MERC"
+      "HANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n % DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR C"
+      "ONTRIBUTORS BE LIABLE\n % FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n % DAMAGES"
+      " (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n % SERVICES; LOSS OF USE, DATA, OR PROFITS;"
+      " OR BUSINESS INTERRUPTION) HOWEVER\n % CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABIL"
+      "ITY,\n % OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n % OF THIS SOFTWARE, EVE"
+      "N IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n % \n  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      "%\n\n"
+      Position		      [-775, -73, -261, 349]
+      InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      off
+      FixedWidth	      off
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      ZOrder		      -1
+    }
+    Annotation {
+      SID		      "31"
+      Name		      "\ngoertzel_spectrum\n                                         "
+      Position		      [275, 2, 504, 73]
+      InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      off
+      FixedWidth	      off
+      DropShadow	      on
+      ZOrder		      -1
+      FontName		      "Arial"
+      FontSize		      20
+      FontWeight	      "bold"
+    }
+  }
+}
